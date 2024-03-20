@@ -1,10 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import { FaEye } from "react-icons/fa";
+import Carousel from "nuka-carousel";
 
 import Portrait from "@/public/olga.png";
 import Service1 from "@/public/service1.png";
 import Service2 from "@/public/service2.png";
 import Service3 from "@/public/service3.png";
+import Bullet from "@/public/bullet.png";
 import Link from "next/link";
 
 export default function Home() {
@@ -23,13 +27,15 @@ export default function Home() {
           Образовательное пространство для тех, кто хочет сделать Финляндию
           своим домом
         </p>
-        <button className="w-[8rem] h-[2.5rem] text-[white] bg-blue-main rounded-md ">
+        <button className="w-[8rem] h-[2.5rem] text-white font-normal bg-blue-main rounded-md ">
           Подробнее
         </button>
         <Image
           src={Portrait}
           alt="Olga Korka portrait"
           width={500}
+          quality={95}
+          priority
           className="absolute -z-[10] hidden lg:block -top-20 -right-10"
         />
       </section>
@@ -107,11 +113,115 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="how-to-buy"></section>
+      <section id="how-to-buy" className="flex flex-col my-20">
+        <h2 className="text-lg font-medium text-center mb-24">
+          Как приобрести тур, прогулку или консультацию?
+        </h2>
+        <div className="max-w-[60rem] pl-16">
+          <div className="flex gap-8 items-start justify-center mb-16 pl-[5rem] pr-[15rem]">
+            <div className="flex items-center justify-center px-3 py-1 bg-blue-main rounded-full font-medium">
+              1
+            </div>
+            <div className="leading-10">
+              <h3 className="text-sm font-medium mb-3">
+                Выберите тур или консультацию
+              </h3>
+              <p className="text-sm leading-7">
+                Чтобы убедиться в том, что лекция вам интересна, и прочитайте
+                описание. Понравившиеся продукты добавьте в корзину.
+              </p>
+            </div>
+          </div>
+          <div className="flex gap-8 items-start justify-center mb-16 pl-[20rem]">
+            <div className="flex items-center justify-center px-3 py-1 bg-peach-main rounded-full font-medium">
+              2
+            </div>
+            <div className="leading-10">
+              <h3 className="text-sm font-medium mb-3">Оформите заказ</h3>
+              <p className="text-sm leading-7">
+                Доступ к материалам в этом Лектории предоставляется только
+                зарегистрированным пользователям. Если вы уже приобретали что-то
+                раньше, войдите под своим логином.
+              </p>
+            </div>
+          </div>
+          <div className="flex gap-8 items-start justify-center mb-16 px-[9rem]">
+            <div className="flex items-center justify-center px-3 py-1 bg-coral-main rounded-full font-medium">
+              3
+            </div>
+            <div className="leading-10">
+              <h3 className="text-sm font-medium mb-3">Оплатите заказ</h3>
+              <p className="text-sm leading-7">
+                Вы можете оплатить заказ картой или при помощи PayPal. Некоторые
+                заказы требуют обработки в ручном режиме: доступ к записи лекций
+                и вебинаров, которые уже состоялись, вы получите не позднее 24
+                часов с момента оплаты. На вашу электронную почту придет
+                уведомление со ссылкой в личный кабинет и доступом к оплаченным
+                материалам.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <section id="advantages"></section>
+      <section id="advantages" className="flex flex-col my-20 w-[50rem]">
+        <h2 className="text-lg font-normal mb-10 pl-14">
+          Общение со мной вам необходимо, ЕСЛИ ВЫ ХОТИТЕ:
+        </h2>
+        <div>
+          <div className="flex items-center gap-7 mb-6">
+            <Image src={Bullet} alt="bullet icon" width={30} />
+            <p className="font-normal">
+              Рассмотреть Финляндию за пределами субъективных оценок, осуждений
+              и восторгов.
+            </p>
+          </div>
+          <div className="flex items-center gap-7 mb-6">
+            <Image src={Bullet} alt="bullet icon" width={30} />
+            <p className="font-normal">
+              Глубже понять культурно-исторические предпосылки и процессы,
+              лежащие в основе уже известных явлений. Ответы на вопрос "почему
+              так?" предоставляют возможности для разработки стратегий "как с
+              этим быть".
+            </p>
+          </div>
+          <div className="flex items-center gap-7 mb-6">
+            <Image src={Bullet} alt="bullet icon" width={30} />
+            <p className="font-normal">
+              Разложить финскую действительность на уровне менталитета и
+              культурных кодов.
+            </p>
+          </div>
+        </div>
+      </section>
 
-      <section id="feedback"></section>
+      <section id="feedback" className="flex flex-col my-20 w-[50rem]">
+        <h2 className="text-4xl font-black">Впечатления</h2>
+        <Carousel>
+          <div className="flex flex-col justify-center px-28 py-16">
+            <h3 className="mb-3">Дина</h3>
+            <p className="mb-4">15 июля 2023</p>
+            <p>
+              Экскурсия очень понравилась. Получила море полезной и интересной
+              информации в том числе практической на самые разные темы. Ольга
+              хороший собеседник, с которым легко и просто общаться и который
+              подстраивается под ваши интересы. Она также помогла мне
+              определиться с дальнейшей программой уже после экскурсии… если
+              будете в Хельсинки, очень рекомендую ее. Вы не разочаруетесь.
+            </p>
+          </div>
+          <div className="flex flex-col justify-center px-28 py-16">
+            <h3 className="mb-3">Алексей</h3>
+            <p className="mb-4">25 июля 2023</p>
+            <p>
+              Экскурсия очень понравилась. Получила море полезной и интересной
+              информации в том числе практической на самые разные темы. Ольга
+              хороший собеседник, с которым легко и просто общаться и который
+              подстраивается под ваши интересы.
+            </p>
+          </div>
+        </Carousel>
+      </section>
 
       <section id="subscribe"></section>
     </main>
