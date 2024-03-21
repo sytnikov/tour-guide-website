@@ -1,22 +1,23 @@
-"use client";
-
 import Image from "next/image";
 import { FaEye } from "react-icons/fa";
-import Carousel from "nuka-carousel";
 
 import Portrait from "@/public/olga.png";
 import Service1 from "@/public/service1.png";
 import Service2 from "@/public/service2.png";
 import Service3 from "@/public/service3.png";
 import Bullet from "@/public/bullet.png";
+import FeedbackBackground from "@/public/feedback-bg.png";
+import NewsletterBackground from "@/public/newsletter-bg.png";
 import Link from "next/link";
+import FeedbackSlider from "@/components/FeedbackSlider";
+import NewsletterSubscription from "@/components/NewsletterSubscription";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center">
       <section
         id="front-section"
-        className="relative flex flex-col sm:w-[35rem] md:w-[45rem] lg:w-[60rem] max-w-[60rem] my-20 gap-6"
+        className="relative flex flex-col sm:w-[35rem] md:w-[45rem] lg:w-[60rem] max-w-[60rem] mx-12 my-20 gap-6"
       >
         <h1 className="text-lg font-medium">Лекторий Ольги Корка</h1>
         <h2 className="uppercase text-4xl font-extralight tracking-widest mb-[3rem]">
@@ -33,16 +34,16 @@ export default function Home() {
         <Image
           src={Portrait}
           alt="Olga Korka portrait"
-          width={500}
+          width={550}
           quality={95}
           priority
-          className="absolute -z-[10] hidden lg:block -top-20 -right-10"
+          className="absolute -z-[10] hidden lg:block -top-60 -right-10"
         />
       </section>
 
       <section
         id="description"
-        className="sm:w-[35rem] md:w-[45rem] lg:w-[60rem] max-w-[60rem] my-20 px-16"
+        className="sm:w-[35rem] md:w-[45rem] lg:w-[60rem] max-w-[60rem] mx-12 my-20 px-16"
       >
         <p className="mt-8">
           Проект создан для того, чтобы все русскоязычные жители Финляндии, а
@@ -56,7 +57,7 @@ export default function Home() {
         </p>
       </section>
 
-      <section id="services" className="grid grid-cols-3 gap-4 my-20">
+      <section id="services" className="grid grid-cols-3 gap-4 mx-12 my-20">
         <div className="flex flex-col items-center  p-4">
           <Image
             src={Service1}
@@ -113,7 +114,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="how-to-buy" className="flex flex-col my-20">
+      <section id="how-to-buy" className="flex flex-col mx-12 my-20">
         <h2 className="text-lg font-medium text-center mb-24">
           Как приобрести тур, прогулку или консультацию?
         </h2>
@@ -164,7 +165,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="advantages" className="flex flex-col my-20 w-[50rem]">
+      <section id="advantages" className="flex flex-col mx-12 my-20 w-[50rem]">
         <h2 className="text-lg font-normal mb-10 pl-14">
           Общение со мной вам необходимо, ЕСЛИ ВЫ ХОТИТЕ:
         </h2>
@@ -177,7 +178,7 @@ export default function Home() {
             </p>
           </div>
           <div className="flex items-center gap-7 mb-6">
-            <Image src={Bullet} alt="bullet icon" width={30} />
+            <Image src={Bullet} alt="bullet icon" width={30} height={33} />
             <p className="font-normal">
               Глубже понять культурно-исторические предпосылки и процессы,
               лежащие в основе уже известных явлений. Ответы на вопрос "почему
@@ -195,35 +196,33 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="feedback" className="flex flex-col my-20 w-[50rem]">
-        <h2 className="text-4xl font-black">Впечатления</h2>
-        <Carousel>
-          <div className="flex flex-col justify-center px-28 py-16">
-            <h3 className="mb-3">Дина</h3>
-            <p className="mb-4">15 июля 2023</p>
-            <p>
-              Экскурсия очень понравилась. Получила море полезной и интересной
-              информации в том числе практической на самые разные темы. Ольга
-              хороший собеседник, с которым легко и просто общаться и который
-              подстраивается под ваши интересы. Она также помогла мне
-              определиться с дальнейшей программой уже после экскурсии… если
-              будете в Хельсинки, очень рекомендую ее. Вы не разочаруетесь.
-            </p>
-          </div>
-          <div className="flex flex-col justify-center px-28 py-16">
-            <h3 className="mb-3">Алексей</h3>
-            <p className="mb-4">25 июля 2023</p>
-            <p>
-              Экскурсия очень понравилась. Получила море полезной и интересной
-              информации в том числе практической на самые разные темы. Ольга
-              хороший собеседник, с которым легко и просто общаться и который
-              подстраивается под ваши интересы.
-            </p>
-          </div>
-        </Carousel>
+      <section id="feedback" className="relative w-full">
+        <Image
+          src={FeedbackBackground}
+          alt="feedback section background"
+          width={1500}
+          className="absolute -top-10 -z-[5]"
+        />
+        <div className="flex flex-col justify-center items-center my-20">
+          <h2 className="text-4xl font-black mb-8 w-[50rem]">Впечатления</h2>
+          <FeedbackSlider />
+        </div>
       </section>
 
-      <section id="subscribe"></section>
+      <section id="subscribe" className="relative mt-36 w-full">
+        <Image
+          src={NewsletterBackground}
+          alt="newsletter subscription section background"
+          width={1000}
+          className="absolute top-32 -z-[5]"
+        />
+        <div className="flex flex-col justify-center items-center my-20">
+          <h2 className="text-4xl font-black mb-36 w-[50rem]">
+            Остаемся на связи?
+          </h2>
+          <NewsletterSubscription />
+        </div>
+      </section>
     </main>
   );
 }

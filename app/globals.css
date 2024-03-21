@@ -11,7 +11,7 @@
 }
 
 html {
-  @apply font-roboto font-light h-[1000rem];
+  @apply font-roboto font-light h-[300rem];
 }
 
 body {
@@ -22,9 +22,22 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-  @apply mx-12;
 }
 
-.btn {
-  @apply flex items-center gap-2
+input::placeholder {
+  @apply text-black
 }
+
+/* button styles */
+
+.btn {
+  @apply flex items-center justify-center gap-2
+}
+
+.btn-submit {
+  @apply h-[3.5rem] w-[12rem] bg-coral-main rounded-xl
+  text-white
+}
+
+
+

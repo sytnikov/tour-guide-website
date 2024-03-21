@@ -24,6 +24,7 @@ const config: Config = {
         dark: "#BD6A5B",
       },
       peach: {
+        extralight: "#FEF9F5",
         light: "#FCDFCB",
         main: "#F9C097",
         dark: "#C79A79",
