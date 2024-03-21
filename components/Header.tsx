@@ -5,7 +5,7 @@ import Logo from "@/public/logo.png"
 
 export default function Header() {
   return (
-    <header className="flex items-center h-[6rem] w-full mt-4 pr-4">
+    <header className="flex items-center h-[6rem] w-full mt-4 mx-12 pr-4 lg:pr-28">
       <Image 
         src={Logo}
         alt="Olga Korka logo"
