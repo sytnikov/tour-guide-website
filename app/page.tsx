@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { FaEye } from "react-icons/fa";
 
-import Portrait from "@/public/olga.png";
 import Service1 from "@/public/service1.png";
 import Service2 from "@/public/service2.png";
 import Service3 from "@/public/service3.png";
@@ -17,33 +16,25 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center">
       <section
         id="front-section"
-        className="relative flex flex-col sm:w-[35rem] md:w-[45rem] lg:w-[60rem] max-w-[60rem] mx-12 my-20 gap-6"
+        className="relative flex flex-col sm:w-[35rem] md:w-[45rem] lg:w-[70rem] max-w-[80rem] my-20 gap-6"
       >
-        <h1 className="text-lg font-medium">Лекторий Ольги Корка</h1>
-        <h2 className="uppercase text-4xl font-extralight tracking-widest mb-[3rem]">
+        <h1 className="text-2xl font-medium">Лекторий Ольги Корка</h1>
+        <h2 className="font-sans uppercase text-5xl font-extralight tracking-widest mb-[2rem]">
           Объясняя Финляндию
         </h2>
 
-        <p className="w-1/2 mb-[2rem]">
+        <p className="text-xl w-1/2 mb-[2rem]">
           Образовательное пространство для тех, кто хочет сделать Финляндию
           своим домом
         </p>
         <button className="w-[8rem] h-[2.5rem] text-white font-normal bg-blue-main rounded-md ">
-          Подробнее
+          Связаться
         </button>
-        <Image
-          src={Portrait}
-          alt="Olga Korka portrait"
-          width={550}
-          quality={95}
-          priority
-          className="absolute -z-[10] hidden lg:block -top-60 -right-10"
-        />
       </section>
 
       <section
         id="description"
-        className="sm:w-[35rem] md:w-[45rem] lg:w-[60rem] max-w-[60rem] mx-12 my-20 px-16"
+        className="text-xl max-w-[70rem] mx-12 mt-32 mb-20 px-16"
       >
         <p className="mt-8">
           Проект создан для того, чтобы все русскоязычные жители Финляндии, а
@@ -200,8 +191,8 @@ export default function Home() {
         <Image
           src={FeedbackBackground}
           alt="feedback section background"
-          width={1500}
-          className="absolute -top-10 -z-[5]"
+          width={2500}
+          className="absolute top-0 left-0 w-auto h-[100%] z-[-1] object-cover"
         />
         <div className="flex flex-col justify-center items-center my-20">
           <h2 className="text-4xl font-black mb-8 w-[50rem]">Впечатления</h2>
