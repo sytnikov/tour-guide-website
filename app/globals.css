@@ -25,7 +25,11 @@ body {
 }
 
 input::placeholder {
-  @apply text-black
+  @apply text-black/60
+}
+
+textarea::placeholder {
+  @apply text-black/60
 }
 
 /* button styles */

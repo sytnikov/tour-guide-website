@@ -3,11 +3,12 @@ import { FaEye } from "react-icons/fa";
 
 import Bullet from "@/public/bullet.png";
 import FeedbackBackground from "@/public/feedback-bg.png";
-import NewsletterBackground from "@/public/newsletter-bg.png";
+import ContactBackground from "@/public/contact-bg.png";
 import Link from "next/link";
 import FeedbackSlider from "@/components/FeedbackSlider";
-import NewsletterSubscription from "@/components/NewsletterSubscription";
 import { offers, yourDesires } from "@/lib/data";
+import OlgaPortrait from "@/public/olga-about.png";
+import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
   return (
@@ -73,21 +74,21 @@ export default function Home() {
         <div className="grid grid-cols-3 gap-4 mt-16">
           {offers.map((offer, index) => (
             <div key={index} className="flex flex-col items-center">
-            <Image
-              src={offer.image}
-              alt="offer picture"
-              width={250}
-              className="mb-6"
-            />
-            <div className="flex flex-col items-start mx-16">
-              <h3 className="uppercase font-medium mb-2">{offer.name}</h3>
-              <p className="max-w-[30ch] mb-6">{offer.description}</p>
-              <Link href="#" className="btn text-coral-main ">
-                <FaEye />
-                Узнать больше
-              </Link>
+              <Image
+                src={offer.image}
+                alt="offer picture"
+                width={250}
+                className="mb-6"
+              />
+              <div className="flex flex-col items-start mx-16">
+                <h3 className="uppercase font-medium mb-2">{offer.name}</h3>
+                <p className="max-w-[30ch] mb-6">{offer.description}</p>
+                <Link href="#" className="btn text-coral-main ">
+                  <FaEye />
+                  Узнать больше
+                </Link>
+              </div>
             </div>
-          </div>
           ))}
         </div>
       </section>
@@ -143,7 +144,10 @@ export default function Home() {
         </div>
       </section> */}
 
-      <section id="feedback" className="relative flex flex-col items-center w-full">
+      <section
+        id="feedback"
+        className="relative flex flex-col items-center w-full"
+      >
         <Image
           src={FeedbackBackground}
           alt="feedback section background"
@@ -151,8 +155,38 @@ export default function Home() {
           className="absolute top-0 left-0 w-auto h-[100%] z-[-1] object-cover"
         />
         <div className="flex flex-col justify-center items-center mx-12 my-20 max-w-[70rem]">
-          <h2 className="text-left font-sans uppercase text-4xl font-extralight tracking-widest w-full">Впечатления</h2>
+          <h2 className="text-left font-sans uppercase text-4xl font-extralight tracking-widest w-full">
+            Впечатления
+          </h2>
           <FeedbackSlider />
+        </div>
+      </section>
+
+      <section
+        id="about"
+        className="font-light max-w-[70rem] mx-12 mt-32 mb-20"
+      >
+        <h2 className="font-sans uppercase text-4xl font-extralight tracking-widest">
+          Обо мне
+        </h2>
+        <div className="flex items-center h-auto">
+          <Image
+            src={OlgaPortrait}
+            alt="Olga Korka portrait"
+            height={700}
+            quality={95}
+            className="p-2 mr-20"
+          />
+          <p className="text-base max-w-[20rem] ml-6 mr-12">
+            Я Ольга Корка. Моя основная работа связана с антиквариатом, отсюда
+            и увлечение историей, культурой и искусством. Люблю Хельсинки, живу
+            здесь 10 лет, не устаю открывать для себя все новые стороны этого
+            прекрасного северного города и его окрестностей. Люблю делиться
+            с путешественниками своими открытиями, общаться, делать жизнь
+            радостнее и увлекательнее. Самая главная награда для меня, когда
+            путешественники говорят: «Мы не ожидали, что город окажется ТАКИМ
+            интересным!»
+          </p>
         </div>
       </section>
 
@@ -170,6 +204,25 @@ export default function Home() {
           <NewsletterSubscription />
         </div>
       </section> */}
+
+      <section
+        id="contact-form"
+        className="relative flex flex-col items-center w-full"
+      >
+        <Image
+          src={ContactBackground}
+          alt="contact section background"
+          width={2500}
+          className="absolute -top-[3rem] z-[-1] object-cover"
+        />
+
+        <div className="flex flex-col justify-center items-center mx-12 my-20 max-w-[70rem] ">
+          <h2 className="font-sans uppercase text-4xl text-left mx-12 w-full font-extralight tracking-widest mb-[3rem]">
+            Остаемся на связи?
+          </h2>
+          <ContactForm />
+        </div>
+      </section>
     </main>
   );
 }
