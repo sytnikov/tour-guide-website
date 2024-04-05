@@ -11,16 +11,14 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="relative mt-[100rem]">
-      <Image
+    <footer className="relative mt-[16rem]">
+      {/* <Image
         src={FooterBackground}
         alt="footer section background"
         width={1500}
         className="absolute -top-40 -z-[5]"
-      />
-      <div className="flex items-end justify-evenly w-full">
-        <div>
-          <Image
+      /> */}
+      <Image
             src={Logo}
             alt="Olga Korka logo"
             width={70}
@@ -28,7 +26,7 @@ export default function Footer() {
             quality={95}
             priority
           />
-        </div>
+      <div className="flex items-end justify-evenly w-full">
         <nav>
           <ul className="flex flex-col gap-3">
             {navLinks.map((link, index) => (
@@ -40,9 +38,12 @@ export default function Footer() {
         </nav>
         <div className="flex">
           <div className="flex gap-2 mt-auto">
+            <div className="bg-cover bg-instagram">
             <Link href="#" className="btn btn-icon">
-              <FaInstagram />
+              <FaInstagram/>
             </Link>
+            </div>
+            
             <Link href="#" className="btn btn-icon">
               <CiMail />
             </Link>

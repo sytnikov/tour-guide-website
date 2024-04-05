@@ -6,13 +6,14 @@ import FeedbackBackground from "@/public/feedback-bg.png";
 import ContactBackground from "@/public/contact-bg.png";
 import Link from "next/link";
 import FeedbackSlider from "@/components/FeedbackSlider";
-import { offers, yourDesires } from "@/lib/data";
+import { articles, offers, yourDesires } from "@/lib/data";
 import OlgaPortrait from "@/public/olga-about.png";
 import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center">
+
       <section
         id="front-section"
         className="relative flex flex-col sm:w-[35rem] md:w-[45rem] lg:w-[70rem] max-w-[80rem] mt-48 mb-20 gap-6"
@@ -215,7 +216,6 @@ export default function Home() {
           width={2500}
           className="absolute -top-[3rem] z-[-1] object-cover"
         />
-
         <div className="flex flex-col justify-center items-center mx-12 my-20 max-w-[70rem] ">
           <h2 className="font-sans uppercase text-4xl text-left mx-12 w-full font-extralight tracking-widest mb-[3rem]">
             Остаемся на связи?
@@ -223,6 +223,29 @@ export default function Home() {
           <ContactForm />
         </div>
       </section>
+
+      <section id="services" className="mx-12 mt-36 max-w-[70rem]">
+        <h2 className="font-sans uppercase text-4xl font-extralight tracking-widest mb-[3rem]">
+          А это будет интересно
+        </h2>
+        <div className="grid grid-cols-3 gap-4 mt-16">
+          {articles.map((article, index) => (
+            <div key={index} className="flex flex-col items-center">
+              <Image
+                src={article.image}
+                alt="article picture"
+                height={300}
+                className="mb-6"
+              />
+              <div className="flex flex-col items-start mx-10">
+                <h3 className="font-light mb-8">{article.name}</h3>
+                <p className="mb-6">{article.source}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
     </main>
   );
 }

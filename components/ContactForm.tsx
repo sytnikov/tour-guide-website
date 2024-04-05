@@ -22,7 +22,7 @@ export default function ContactForm() {
           className="h-[2.5rem] w-[20rem] bg-peach-extralight outline-none rounded-xl p-2"
         />
         <textarea
-          rows="8"
+          rows={8}
           placeholder="Ваше сообщение"
           className="bg-peach-extralight outline-none rounded-xl p-2"
         ></textarea>
