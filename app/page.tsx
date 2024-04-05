@@ -10,13 +10,14 @@ import NewsletterBackground from "@/public/newsletter-bg.png";
 import Link from "next/link";
 import FeedbackSlider from "@/components/FeedbackSlider";
 import NewsletterSubscription from "@/components/NewsletterSubscription";
+import { yourDesires } from "@/lib/data";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center">
       <section
         id="front-section"
-        className="relative flex flex-col sm:w-[35rem] md:w-[45rem] lg:w-[70rem] max-w-[80rem] my-20 gap-6"
+        className="relative flex flex-col sm:w-[35rem] md:w-[45rem] lg:w-[70rem] max-w-[80rem] mt-48 mb-20 gap-6"
       >
         <h1 className="text-2xl font-medium">Лекторий Ольги Корка</h1>
         <h2 className="font-sans uppercase text-5xl font-extralight tracking-widest mb-[2rem]">
@@ -36,7 +37,7 @@ export default function Home() {
         id="description"
         className="text-xl max-w-[70rem] mx-12 mt-32 mb-20 px-16"
       >
-        <p className="mt-8">
+        <p className="mt-16">
           Проект создан для того, чтобы все русскоязычные жители Финляндии, а
           также те, кто интересуется финским языком, культурой и историей,
           построили глубокую и прочную связь со страной через понимание и
@@ -46,6 +47,22 @@ export default function Home() {
           Если вы цените свободу и толерантность, если вами движет любопытство,
           страсть к познанию и развитию, нам есть о чём поговорить!
         </p>
+      </section>
+
+      <section id="advantages" className="flex flex-col mx-12 my-20 max-w-[70rem]">
+        <h2 className="font-sans uppercase text-4xl font-extralight tracking-widest mb-[2rem]">
+          Если вы хотите:
+        </h2>
+        <div>
+          {yourDesires.map((item, index) => (
+            <div key={index} className="flex items-center text-xl gap-7 mb-6">
+              <Image src={Bullet} alt="bullet icon" width={30} />
+              <p>
+                {item.text}
+              </p>
+            </div>
+          ))}
+        </div>
       </section>
 
       <section id="services" className="grid grid-cols-3 gap-4 mx-12 my-20">
@@ -152,37 +169,6 @@ export default function Home() {
                 материалам.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="advantages" className="flex flex-col mx-12 my-20 w-[50rem]">
-        <h2 className="text-lg font-normal mb-10 pl-14">
-          Общение со мной вам необходимо, ЕСЛИ ВЫ ХОТИТЕ:
-        </h2>
-        <div>
-          <div className="flex items-center gap-7 mb-6">
-            <Image src={Bullet} alt="bullet icon" width={30} />
-            <p className="font-normal">
-              Рассмотреть Финляндию за пределами субъективных оценок, осуждений
-              и восторгов.
-            </p>
-          </div>
-          <div className="flex items-center gap-7 mb-6">
-            <Image src={Bullet} alt="bullet icon" width={30} height={33} />
-            <p className="font-normal">
-              Глубже понять культурно-исторические предпосылки и процессы,
-              лежащие в основе уже известных явлений. Ответы на вопрос "почему
-              так?" предоставляют возможности для разработки стратегий "как с
-              этим быть".
-            </p>
-          </div>
-          <div className="flex items-center gap-7 mb-6">
-            <Image src={Bullet} alt="bullet icon" width={30} />
-            <p className="font-normal">
-              Разложить финскую действительность на уровне менталитета и
-              культурных кодов.
-            </p>
           </div>
         </div>
       </section>
