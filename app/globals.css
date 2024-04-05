@@ -44,7 +44,7 @@ textarea::placeholder {
 }
 
 .btn-icon {
-  @apply bg-white text-2xl text-black px-4 cursor-pointer
+  @apply text-2xl text-black px-4 cursor-pointer
   rounded-full px-3 py-3
 }
 

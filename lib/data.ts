@@ -4,6 +4,9 @@ import Offer3 from "@/public/service3.png";
 import Avatar1 from "@/public/avatar1.jpg";
 import Avatar2 from "@/public/avatar2.jpg";
 import Avatar3 from "@/public/avatar3.jpg";
+import Article1 from "@/public/article1.png";
+import Article2 from "@/public/article2.png";
+import Article3 from "@/public/article3.png";
 
 export const navLinks = [
   "Главная",
@@ -73,3 +76,22 @@ export const feedbackEntries = [
     text: "Экскурсия очень понравилась. Получила море полезной и интересной информации в том числе практической на самые разные темы. Ольга хороший собеседник, с которым легко и просто общаться и который подстраивается под ваши интересы. Она также помогла мне определиться с дальнейшей программой уже после экскурсии… если будете в Хельсинки, очень рекомендую ее. Вы не разочаруетесь.",
   },
 ] as const;
+
+export const articles = [
+  {
+    image: Article1,
+    name: "Финляндия в стекле. Стеклянное наследие Алвара Аалто /",
+    source: "журнал Culturalist",
+  },
+  {
+    image: Article2,
+    name: "Жизнь как стекло. Стойкая и хрупкая Гуннель Нюман / ",
+    source: "журнал Culturalist",
+  },
+  {
+    image: Article3,
+    name: "ВЕСЬ В ДЕЛАХ: «В другой стране ты никогда не станешь своим в доску, но в этом нет трагедии» /",
+    source: "YLE.FI",
+  },
+
+] as const
