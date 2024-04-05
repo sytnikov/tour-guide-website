@@ -1,16 +1,13 @@
 import Image from "next/image";
 import { FaEye } from "react-icons/fa";
 
-import Service1 from "@/public/service1.png";
-import Service2 from "@/public/service2.png";
-import Service3 from "@/public/service3.png";
 import Bullet from "@/public/bullet.png";
 import FeedbackBackground from "@/public/feedback-bg.png";
 import NewsletterBackground from "@/public/newsletter-bg.png";
 import Link from "next/link";
 import FeedbackSlider from "@/components/FeedbackSlider";
 import NewsletterSubscription from "@/components/NewsletterSubscription";
-import { yourDesires } from "@/lib/data";
+import { offers, yourDesires } from "@/lib/data";
 
 export default function Home() {
   return (
@@ -35,7 +32,7 @@ export default function Home() {
 
       <section
         id="description"
-        className="text-xl max-w-[70rem] mx-12 mt-32 mb-20 px-16"
+        className="text-xl font-light max-w-[70rem] mx-12 mt-32 mb-20 px-16"
       >
         <p className="mt-16">
           Проект создан для того, чтобы все русскоязычные жители Финляндии, а
@@ -49,80 +46,53 @@ export default function Home() {
         </p>
       </section>
 
-      <section id="advantages" className="flex flex-col mx-12 my-20 max-w-[70rem]">
-        <h2 className="font-sans uppercase text-4xl font-extralight tracking-widest mb-[2rem]">
+      <section
+        id="advantages"
+        className="flex flex-col mx-12 my-20 max-w-[70rem]"
+      >
+        <h2 className="font-sans uppercase text-4xl font-extralight tracking-widest mb-[3rem]">
           Если вы хотите:
         </h2>
         <div>
           {yourDesires.map((item, index) => (
-            <div key={index} className="flex items-center text-xl gap-7 mb-6">
+            <div
+              key={index}
+              className="flex items-center text-xl font-extralight gap-7 mb-6"
+            >
               <Image src={Bullet} alt="bullet icon" width={30} />
-              <p>
-                {item.text}
-              </p>
+              <p>{item.text}</p>
             </div>
           ))}
         </div>
       </section>
 
-      <section id="services" className="grid grid-cols-3 gap-4 mx-12 my-20">
-        <div className="flex flex-col items-center  p-4">
-          <Image
-            src={Service1}
-            alt="art consultancy pic"
-            width={250}
-            className="mb-6"
-          />
-          <div className="mx-16">
-            <h3 className="uppercase mb-2">Арт-консультации</h3>
-            <p className="max-w-[30ch] mb-6">
-              Объемное представление о городе за 2 часа
-            </p>
-            <Link href="#" className="btn text-coral-main ">
-              <FaEye />
-              Узнать больше
-            </Link>
+      <section id="services" className="mx-12 my-20 max-w-[70rem]">
+        <h2 className="font-sans uppercase text-4xl font-extralight tracking-widest mb-[3rem]">
+          Мои предложения
+        </h2>
+        <div className="grid grid-cols-3 gap-4 mt-16">
+          {offers.map((offer, index) => (
+            <div key={index} className="flex flex-col items-center">
+            <Image
+              src={offer.image}
+              alt="offer picture"
+              width={250}
+              className="mb-6"
+            />
+            <div className="flex flex-col items-start mx-16">
+              <h3 className="uppercase font-medium mb-2">{offer.name}</h3>
+              <p className="max-w-[30ch] mb-6">{offer.description}</p>
+              <Link href="#" className="btn text-coral-main ">
+                <FaEye />
+                Узнать больше
+              </Link>
+            </div>
           </div>
-        </div>
-        <div className="flex flex-col items-center  p-4">
-          <Image
-            src={Service2}
-            alt="art consultancy pic"
-            width={250}
-            className="mb-6"
-          />
-          <div className="mx-16">
-            <h3 className="uppercase mb-2">Прогулки</h3>
-            <p className="max-w-[30ch] mb-6">
-              Объемное представление о городе за 2 часа
-            </p>
-            <Link href="#" className="btn text-coral-main ">
-              <FaEye />
-              Узнать больше
-            </Link>
-          </div>
-        </div>
-        <div className="flex flex-col items-center p-4">
-          <Image
-            src={Service3}
-            alt="art consultancy pic"
-            width={250}
-            className="mb-6"
-          />
-          <div className="mx-16">
-            <h3 className="uppercase mb-2">Блог культуролога</h3>
-            <p className="max-w-[30ch] mb-6">
-              Объемное представление о городе за 2 часа
-            </p>
-            <Link href="#" className="btn text-coral-main ">
-              <FaEye />
-              Узнать больше
-            </Link>
-          </div>
+          ))}
         </div>
       </section>
 
-      <section id="how-to-buy" className="flex flex-col mx-12 my-20">
+      {/* <section id="how-to-buy" className="flex flex-col mx-12 my-20">
         <h2 className="text-lg font-medium text-center mb-24">
           Как приобрести тур, прогулку или консультацию?
         </h2>
@@ -171,22 +141,22 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section id="feedback" className="relative w-full">
+      <section id="feedback" className="relative flex flex-col items-center w-full">
         <Image
           src={FeedbackBackground}
           alt="feedback section background"
           width={2500}
           className="absolute top-0 left-0 w-auto h-[100%] z-[-1] object-cover"
         />
-        <div className="flex flex-col justify-center items-center my-20">
-          <h2 className="text-4xl font-black mb-8 w-[50rem]">Впечатления</h2>
+        <div className="flex flex-col justify-center items-center mx-12 my-20 max-w-[70rem]">
+          <h2 className="text-left font-sans uppercase text-4xl font-extralight tracking-widest w-full">Впечатления</h2>
           <FeedbackSlider />
         </div>
       </section>
 
-      <section id="subscribe" className="relative mt-36 w-full">
+      {/* <section id="subscribe" className="relative mt-36 w-full">
         <Image
           src={NewsletterBackground}
           alt="newsletter subscription section background"
@@ -199,7 +169,7 @@ export default function Home() {
           </h2>
           <NewsletterSubscription />
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }
