@@ -1,51 +1,41 @@
 import Image from "next/image";
 import { FaEye } from "react-icons/fa";
 
-import Portrait from "@/public/olga.png";
-import Service1 from "@/public/service1.png";
-import Service2 from "@/public/service2.png";
-import Service3 from "@/public/service3.png";
 import Bullet from "@/public/bullet.png";
 import FeedbackBackground from "@/public/feedback-bg.png";
-import NewsletterBackground from "@/public/newsletter-bg.png";
+import ContactBackground from "@/public/contact-bg.png";
 import Link from "next/link";
 import FeedbackSlider from "@/components/FeedbackSlider";
-import NewsletterSubscription from "@/components/NewsletterSubscription";
+import { offers, yourDesires } from "@/lib/data";
+import OlgaPortrait from "@/public/olga-about.png";
+import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center">
       <section
         id="front-section"
-        className="relative flex flex-col sm:w-[35rem] md:w-[45rem] lg:w-[60rem] max-w-[60rem] mx-12 my-20 gap-6"
+        className="relative flex flex-col sm:w-[35rem] md:w-[45rem] lg:w-[70rem] max-w-[80rem] mt-48 mb-20 gap-6"
       >
-        <h1 className="text-lg font-medium">Лекторий Ольги Корка</h1>
-        <h2 className="uppercase text-4xl font-extralight tracking-widest mb-[3rem]">
+        <h1 className="text-2xl font-medium">Лекторий Ольги Корка</h1>
+        <h2 className="font-sans uppercase text-5xl font-extralight tracking-widest mb-[2rem]">
           Объясняя Финляндию
         </h2>
 
-        <p className="w-1/2 mb-[2rem]">
+        <p className="text-xl w-1/2 mb-[2rem]">
           Образовательное пространство для тех, кто хочет сделать Финляндию
           своим домом
         </p>
         <button className="w-[8rem] h-[2.5rem] text-white font-normal bg-blue-main rounded-md ">
-          Подробнее
+          Связаться
         </button>
-        <Image
-          src={Portrait}
-          alt="Olga Korka portrait"
-          width={550}
-          quality={95}
-          priority
-          className="absolute -z-[10] hidden lg:block -top-60 -right-10"
-        />
       </section>
 
       <section
         id="description"
-        className="sm:w-[35rem] md:w-[45rem] lg:w-[60rem] max-w-[60rem] mx-12 my-20 px-16"
+        className="text-xl font-light max-w-[70rem] mx-12 mt-32 mb-20 px-16"
       >
-        <p className="mt-8">
+        <p className="mt-16">
           Проект создан для того, чтобы все русскоязычные жители Финляндии, а
           также те, кто интересуется финским языком, культурой и историей,
           построили глубокую и прочную связь со страной через понимание и
@@ -57,64 +47,53 @@ export default function Home() {
         </p>
       </section>
 
-      <section id="services" className="grid grid-cols-3 gap-4 mx-12 my-20">
-        <div className="flex flex-col items-center  p-4">
-          <Image
-            src={Service1}
-            alt="art consultancy pic"
-            width={250}
-            className="mb-6"
-          />
-          <div className="mx-16">
-            <h3 className="uppercase mb-2">Арт-консультации</h3>
-            <p className="max-w-[30ch] mb-6">
-              Объемное представление о городе за 2 часа
-            </p>
-            <Link href="#" className="btn text-coral-main ">
-              <FaEye />
-              Узнать больше
-            </Link>
-          </div>
-        </div>
-        <div className="flex flex-col items-center  p-4">
-          <Image
-            src={Service2}
-            alt="art consultancy pic"
-            width={250}
-            className="mb-6"
-          />
-          <div className="mx-16">
-            <h3 className="uppercase mb-2">Прогулки</h3>
-            <p className="max-w-[30ch] mb-6">
-              Объемное представление о городе за 2 часа
-            </p>
-            <Link href="#" className="btn text-coral-main ">
-              <FaEye />
-              Узнать больше
-            </Link>
-          </div>
-        </div>
-        <div className="flex flex-col items-center p-4">
-          <Image
-            src={Service3}
-            alt="art consultancy pic"
-            width={250}
-            className="mb-6"
-          />
-          <div className="mx-16">
-            <h3 className="uppercase mb-2">Блог культуролога</h3>
-            <p className="max-w-[30ch] mb-6">
-              Объемное представление о городе за 2 часа
-            </p>
-            <Link href="#" className="btn text-coral-main ">
-              <FaEye />
-              Узнать больше
-            </Link>
-          </div>
+      <section
+        id="advantages"
+        className="flex flex-col mx-12 my-20 max-w-[70rem]"
+      >
+        <h2 className="font-sans uppercase text-4xl font-extralight tracking-widest mb-[3rem]">
+          Если вы хотите:
+        </h2>
+        <div>
+          {yourDesires.map((item, index) => (
+            <div
+              key={index}
+              className="flex items-center text-xl font-extralight gap-7 mb-6"
+            >
+              <Image src={Bullet} alt="bullet icon" width={30} />
+              <p>{item.text}</p>
+            </div>
+          ))}
         </div>
       </section>
 
-      <section id="how-to-buy" className="flex flex-col mx-12 my-20">
+      <section id="services" className="mx-12 my-20 max-w-[70rem]">
+        <h2 className="font-sans uppercase text-4xl font-extralight tracking-widest mb-[3rem]">
+          Мои предложения
+        </h2>
+        <div className="grid grid-cols-3 gap-4 mt-16">
+          {offers.map((offer, index) => (
+            <div key={index} className="flex flex-col items-center">
+              <Image
+                src={offer.image}
+                alt="offer picture"
+                width={250}
+                className="mb-6"
+              />
+              <div className="flex flex-col items-start mx-16">
+                <h3 className="uppercase font-medium mb-2">{offer.name}</h3>
+                <p className="max-w-[30ch] mb-6">{offer.description}</p>
+                <Link href="#" className="btn text-coral-main ">
+                  <FaEye />
+                  Узнать больше
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* <section id="how-to-buy" className="flex flex-col mx-12 my-20">
         <h2 className="text-lg font-medium text-center mb-24">
           Как приобрести тур, прогулку или консультацию?
         </h2>
@@ -163,53 +142,55 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section id="advantages" className="flex flex-col mx-12 my-20 w-[50rem]">
-        <h2 className="text-lg font-normal mb-10 pl-14">
-          Общение со мной вам необходимо, ЕСЛИ ВЫ ХОТИТЕ:
-        </h2>
-        <div>
-          <div className="flex items-center gap-7 mb-6">
-            <Image src={Bullet} alt="bullet icon" width={30} />
-            <p className="font-normal">
-              Рассмотреть Финляндию за пределами субъективных оценок, осуждений
-              и восторгов.
-            </p>
-          </div>
-          <div className="flex items-center gap-7 mb-6">
-            <Image src={Bullet} alt="bullet icon" width={30} height={33} />
-            <p className="font-normal">
-              Глубже понять культурно-исторические предпосылки и процессы,
-              лежащие в основе уже известных явлений. Ответы на вопрос "почему
-              так?" предоставляют возможности для разработки стратегий "как с
-              этим быть".
-            </p>
-          </div>
-          <div className="flex items-center gap-7 mb-6">
-            <Image src={Bullet} alt="bullet icon" width={30} />
-            <p className="font-normal">
-              Разложить финскую действительность на уровне менталитета и
-              культурных кодов.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="feedback" className="relative w-full">
+      <section
+        id="feedback"
+        className="relative flex flex-col items-center w-full"
+      >
         <Image
           src={FeedbackBackground}
           alt="feedback section background"
-          width={1500}
-          className="absolute -top-10 -z-[5]"
+          width={2500}
+          className="absolute top-0 left-0 w-auto h-[100%] z-[-1] object-cover"
         />
-        <div className="flex flex-col justify-center items-center my-20">
-          <h2 className="text-4xl font-black mb-8 w-[50rem]">Впечатления</h2>
+        <div className="flex flex-col justify-center items-center mx-12 my-20 max-w-[70rem]">
+          <h2 className="text-left font-sans uppercase text-4xl font-extralight tracking-widest w-full">
+            Впечатления
+          </h2>
           <FeedbackSlider />
         </div>
       </section>
 
-      <section id="subscribe" className="relative mt-36 w-full">
+      <section
+        id="about"
+        className="font-light max-w-[70rem] mx-12 mt-32 mb-20"
+      >
+        <h2 className="font-sans uppercase text-4xl font-extralight tracking-widest">
+          Обо мне
+        </h2>
+        <div className="flex items-center h-auto">
+          <Image
+            src={OlgaPortrait}
+            alt="Olga Korka portrait"
+            height={700}
+            quality={95}
+            className="p-2 mr-20"
+          />
+          <p className="text-base max-w-[20rem] ml-6 mr-12">
+            Я Ольга Корка. Моя основная работа связана с антиквариатом, отсюда
+            и увлечение историей, культурой и искусством. Люблю Хельсинки, живу
+            здесь 10 лет, не устаю открывать для себя все новые стороны этого
+            прекрасного северного города и его окрестностей. Люблю делиться
+            с путешественниками своими открытиями, общаться, делать жизнь
+            радостнее и увлекательнее. Самая главная награда для меня, когда
+            путешественники говорят: «Мы не ожидали, что город окажется ТАКИМ
+            интересным!»
+          </p>
+        </div>
+      </section>
+
+      {/* <section id="subscribe" className="relative mt-36 w-full">
         <Image
           src={NewsletterBackground}
           alt="newsletter subscription section background"
@@ -221,6 +202,25 @@ export default function Home() {
             Остаемся на связи?
           </h2>
           <NewsletterSubscription />
+        </div>
+      </section> */}
+
+      <section
+        id="contact-form"
+        className="relative flex flex-col items-center w-full"
+      >
+        <Image
+          src={ContactBackground}
+          alt="contact section background"
+          width={2500}
+          className="absolute -top-[3rem] z-[-1] object-cover"
+        />
+
+        <div className="flex flex-col justify-center items-center mx-12 my-20 max-w-[70rem] ">
+          <h2 className="font-sans uppercase text-4xl text-left mx-12 w-full font-extralight tracking-widest mb-[3rem]">
+            Остаемся на связи?
+          </h2>
+          <ContactForm />
         </div>
       </section>
     </main>

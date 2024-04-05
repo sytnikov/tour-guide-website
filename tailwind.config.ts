@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         roboto: ["Roboto"],
+        sans: ["Tenor Sans", "Helvetica", "Arial", "sans-serif"]
       },
     },
     colors: {

@@ -11,7 +11,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="relative mt-[30rem]">
+    <footer className="relative mt-[100rem]">
       <Image
         src={FooterBackground}
         alt="footer section background"
