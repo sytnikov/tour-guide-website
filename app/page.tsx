@@ -175,7 +175,7 @@ export default function Home() {
             src={OlgaPortrait}
             alt="Olga Korka portrait"
             height={700}
-            quality={95}
+            quality={100}
             className="p-2 mr-20"
           />
           <p className="text-base max-w-[20rem] ml-6 mr-12">
@@ -214,6 +214,7 @@ export default function Home() {
           src={ContactBackground}
           alt="contact section background"
           width={2500}
+          quality={95}
           className="absolute -top-[3rem] z-[-1] object-cover"
         />
         <div className="flex flex-col justify-center items-center mx-12 my-20 max-w-[70rem] ">
@@ -235,6 +236,7 @@ export default function Home() {
                 src={article.image}
                 alt="article picture"
                 height={300}
+                quality={95}
                 className="mb-6"
               />
               <div className="flex flex-col items-start mx-10">
