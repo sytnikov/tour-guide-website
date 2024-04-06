@@ -1,12 +1,12 @@
-import Offer1 from "@/public/service1.png";
+import Offer1 from "/public/service1.png";
 import Offer2 from "@/public/service2.png";
 import Offer3 from "@/public/service3.png";
-import Avatar1 from "@/public/avatar1.jpg";
+import Avatar1 from "../public/avatar1.jpg";
 import Avatar2 from "@/public/avatar2.jpg";
 import Avatar3 from "@/public/avatar3.jpg";
-import Article1 from "@/public/article1.png";
+import Article1 from "../public/article1.png";
 import Article2 from "@/public/article2.png";
-import Article3 from "@/public/article3.png";
+import Article3 from "../public/article3.png";
 
 export const navLinks = [
   "Главная",
