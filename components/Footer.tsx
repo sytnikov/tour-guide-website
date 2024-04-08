@@ -4,55 +4,76 @@ import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
 
-import { navLinks } from "@/lib/data";
-import Logo from "@/public/logo.png";
+import FooterLogo from "@/public/footer-logo.png";
 import FooterBackground from "@/public/footer-bg.png";
 import Link from "next/link";
+import BgInstagram from "@/public/icon-bg-instagram.png";
+import BgMail from "@/public/icon-bg-mail.png";
+import BgGmail from "@/public/icon-bg-gmail.png";
+import BgFacebook from "@/public/icon-bg-facebook.png";
 
 export default function Footer() {
   return (
-    <footer className="relative mt-[16rem]">
-      {/* <Image
+    <footer className="relative pt-48 pb-5 flex flex-col items-center w-full">
+      <Image
         src={FooterBackground}
         alt="footer section background"
-        width={1500}
-        className="absolute -top-40 -z-[5]"
-      /> */}
+        width={3500}
+        className="absolute top-0 w-full h-full -z-[5] object-cover"
+      />
       <Image
-            src={Logo}
-            alt="Olga Korka logo"
-            width={70}
-            height={70}
-            quality={95}
-            priority
-          />
-      <div className="flex items-end justify-evenly w-full">
-        <nav>
-          <ul className="flex flex-col gap-3">
-            {navLinks.map((link, index) => (
-              <li key={index} className="text-white text-sm">
-                {link}
-              </li>
-            ))}
-          </ul>
-        </nav>
+        src={FooterLogo}
+        alt="Olga Korka logo"
+        width={130}
+        height={130}
+        quality={95}
+        className="absolute -top-10 left-20 -z-[5] object-cover"
+      />
+      <div className="flex items-center justify-center gap-10 w-full">
+        <div>
+          <p className="text-white text-lg">Вопросы по экскурсиям и не только</p>
+        </div>
+        <div>
+          <p className="text-white text-lg">+358 45 3559757</p>
+        </div>
         <div className="flex">
-          <div className="flex gap-2 mt-auto">
-            <div className="bg-cover bg-instagram">
-            <Link href="#" className="btn btn-icon">
-              <FaInstagram/>
-            </Link>
+          <div className="flex gap-4">
+            <div className="relative">
+              <Image src={BgInstagram} alt="background image" width={70} />
+              <Link
+                href="#"
+                className="absolute top-0 left-0 flex items-center justify-center w-full h-full"
+              >
+                <FaInstagram className="text-black text-3xl" />
+              </Link>
             </div>
-            
-            <Link href="#" className="btn btn-icon">
-              <CiMail />
-            </Link>
-            <Link href="#" className="btn btn-icon">
-              <FaFacebook />
-            </Link>
-            <Link href="#" className="btn btn-icon">
-              <FaGoogle />
-            </Link>
+            <div className="relative">
+              <Image src={BgMail} alt="background image" width={70} />
+              <Link
+                href="#"
+                className="absolute top-0 left-0 flex items-center justify-center w-full h-full"
+              >
+                <CiMail className="text-black text-3xl" />
+              </Link>
+            </div>
+            <div className="relative">
+              <Image src={BgFacebook} alt="background image" width={70} />
+              <Link
+                href="#"
+                className="absolute top-0 left-0 flex items-center justify-center w-full h-full"
+              >
+                <FaFacebook className="text-black text-3xl" />
+              </Link>
+            </div>
+            <div className="relative">
+              <Image src={BgGmail} alt="background image" width={70} />
+              <Link
+                href="#"
+                className="absolute top-0 left-0 flex items-center justify-center w-full h-full"
+              >
+                <FaGoogle className="text-black text-3xl" />
+              </Link>
+            </div>
           </div>
         </div>
       </div>
