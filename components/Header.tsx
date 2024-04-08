@@ -23,7 +23,7 @@ export default function Header() {
         width={700}
         quality={95}
         priority
-        className="absolute -z-[3] hidden lg:block top-20 lg:-right-10 xl:right-0 2xl:right-24 "
+        className="absolute -z-[3] hidden lg:block top-20 lg:-right-20 xl:-right-10 2xl:right-24 "
       />
       <Image
         src={HeaderBgWhite}

@@ -16,10 +16,10 @@ export default function Home() {
 
       <section
         id="front-section"
-        className="relative flex flex-col sm:w-[35rem] md:w-[45rem] lg:w-[70rem] max-w-[80rem] mt-48 mb-20 gap-6"
+        className="relative flex flex-col sm:w-[35rem] md:w-[45rem] lg:w-[60rem] xl:w-[70rem] max-w-[80rem] mt-48 mb-20 gap-6"
       >
         <h1 className="text-2xl font-medium">Лекторий Ольги Корка</h1>
-        <h2 className="font-sans uppercase text-5xl font-extralight tracking-widest mb-[2rem]">
+        <h2 className="font-sans uppercase lg:text-4xl xl:text-5xl font-extralight tracking-widest mb-[2rem]">
           Объясняя Финляндию
         </h2>
 
@@ -155,6 +155,7 @@ export default function Home() {
           width={2500}
           className="absolute top-0 left-0 w-auto h-full z-[-1] object-cover"
         />
+        
         <div className="flex flex-col justify-center items-center mx-12 my-20 max-w-[70rem]">
           <h2 className="text-left font-sans uppercase text-4xl font-extralight tracking-widest w-full">
             Впечатления
