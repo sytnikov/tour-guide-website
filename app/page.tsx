@@ -153,7 +153,7 @@ export default function Home() {
           src={FeedbackBackground}
           alt="feedback section background"
           width={2500}
-          className="absolute top-0 left-0 w-auto h-[100%] z-[-1] object-cover"
+          className="absolute top-0 left-0 w-auto h-full z-[-1] object-cover"
         />
         <div className="flex flex-col justify-center items-center mx-12 my-20 max-w-[70rem]">
           <h2 className="text-left font-sans uppercase text-4xl font-extralight tracking-widest w-full">
@@ -165,7 +165,7 @@ export default function Home() {
 
       <section
         id="about"
-        className="font-light max-w-[70rem] mx-12 mt-32 mb-20"
+        className="font-light max-w-[70rem] mx-12 mt-32 mb-36"
       >
         <h2 className="font-sans uppercase text-4xl font-extralight tracking-widest">
           Обо мне
@@ -208,24 +208,24 @@ export default function Home() {
 
       <section
         id="contact-form"
-        className="relative flex flex-col items-center w-full"
+        className="relative flex flex-col items-center w-full h-[49rem]"
       >
         <Image
           src={ContactBackground}
           alt="contact section background"
           width={2500}
           quality={95}
-          className="absolute -top-[3rem] z-[-1] object-cover"
+          className="absolute -top-20 w-auto h-full z-[-1] object-cover"
         />
         <div className="flex flex-col justify-center items-center mx-12 my-20 max-w-[70rem] ">
-          <h2 className="font-sans uppercase text-4xl text-left mx-12 w-full font-extralight tracking-widest mb-[3rem]">
+          <h2 className="font-sans uppercase text-4xl text-left w-full font-extralight tracking-widest mb-[3rem]">
             Остаемся на связи?
           </h2>
           <ContactForm />
         </div>
       </section>
 
-      <section id="services" className="mx-12 mt-36 max-w-[70rem]">
+      <section id="services" className="mx-12 my-16 max-w-[70rem]">
         <h2 className="font-sans uppercase text-4xl font-extralight tracking-widest mb-[3rem]">
           А это будет интересно
         </h2>

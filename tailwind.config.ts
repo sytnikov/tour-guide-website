@@ -12,12 +12,6 @@ const config: Config = {
         roboto: ["Roboto"],
         sans: ["Tenor Sans", "Helvetica", "Arial", "sans-serif"]
       },
-      backgroundImage: {
-        instagram: "url('/public/icon-bg-instagram.png')",
-        mail: "@/public/icon-bg-mail.png",
-        facebook: "@/public/icon-bg-facebook.png",
-        gmail: "@/public/icon-bg-gmail.png",
-      }
     },
     colors: {
       blue: {
