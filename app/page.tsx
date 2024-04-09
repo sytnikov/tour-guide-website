@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { FaEye } from "react-icons/fa";
 
+
 import Bullet from "@/public/bullet.png";
 import FeedbackBackground from "@/public/feedback-bg.png";
 import ContactBackground from "@/public/contact-bg.png";
@@ -9,14 +10,14 @@ import FeedbackSlider from "@/components/FeedbackSlider";
 import { articles, offers, yourDesires } from "@/lib/data";
 import OlgaPortrait from "@/public/olga-about.png";
 import ContactForm from "@/components/ContactForm";
+import ServicesCarousel from "@/components/ServicesCarousel";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center">
-
       <section
         id="front-section"
-        className="relative flex flex-col sm:w-[35rem] md:w-[45rem] lg:w-[60rem] xl:w-[70rem] max-w-[80rem] mt-48 mb-20 gap-6"
+        className="relative hidden lg:flex flex-col sm:w-[35rem] md:w-[45rem] lg:w-[60rem] xl:w-[70rem] max-w-[80rem] mt-48 mb-20 gap-6"
       >
         <h1 className="text-2xl font-medium">Лекторий Ольги Корка</h1>
         <h2 className="font-sans uppercase lg:text-4xl xl:text-5xl font-extralight tracking-widest mb-[2rem]">
@@ -34,7 +35,7 @@ export default function Home() {
 
       <section
         id="description"
-        className="text-xl font-light max-w-[70rem] mx-12 mt-32 mb-20 px-16"
+        className="hidden lg:flex flex-col text-xl font-light max-w-[70rem] mx-12 mt-32 mb-20 px-16"
       >
         <p className="mt-16">
           Проект создан для того, чтобы все русскоязычные жители Финляндии, а
@@ -50,7 +51,7 @@ export default function Home() {
 
       <section
         id="advantages"
-        className="flex flex-col mx-12 my-20 max-w-[70rem]"
+        className="hidden lg:flex flex-col mx-12 my-20 max-w-[70rem]"
       >
         <h2 className="font-sans uppercase text-4xl font-extralight tracking-widest mb-[3rem]">
           Если вы хотите:
@@ -68,7 +69,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className="mx-12 my-20 max-w-[70rem]">
+      <section id="services" className="hidden lg:flex flex-col mx-12 my-20 max-w-[70rem]">
         <h2 className="font-sans uppercase text-4xl font-extralight tracking-widest mb-[3rem]">
           Мои предложения
         </h2>
@@ -147,7 +148,7 @@ export default function Home() {
 
       <section
         id="feedback"
-        className="relative flex flex-col items-center w-full"
+        className="relative hidden lg:flex flex-col items-center w-full"
       >
         <Image
           src={FeedbackBackground}
@@ -155,7 +156,7 @@ export default function Home() {
           width={2500}
           className="absolute top-0 left-0 w-auto h-full z-[-1] object-cover"
         />
-        
+
         <div className="flex flex-col justify-center items-center mx-12 my-20 max-w-[70rem]">
           <h2 className="text-left font-sans uppercase text-4xl font-extralight tracking-widest w-full">
             Впечатления
@@ -166,16 +167,16 @@ export default function Home() {
 
       <section
         id="about"
-        className="font-light max-w-[70rem] mx-12 mt-32 mb-36"
+        className="hidden lg:flex flex-col font-light max-w-[70rem] mx-12 mt-32 mb-36"
       >
         <h2 className="font-sans uppercase text-4xl font-extralight tracking-widest">
           Обо мне
         </h2>
-        <div className="flex items-center h-auto">
+        <div className="flex flex-col lg:flex-row items-center">
           <Image
             src={OlgaPortrait}
             alt="Olga Korka portrait"
-            height={700}
+            width={500}
             quality={100}
             className="p-2 mr-20"
           />
@@ -209,7 +210,7 @@ export default function Home() {
 
       <section
         id="contact-form"
-        className="relative flex flex-col items-center w-full h-[49rem]"
+        className="relative hidden lg:block flex flex-col items-center w-full h-[49rem]"
       >
         <Image
           src={ContactBackground}
@@ -226,7 +227,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className="mx-12 my-16 max-w-[70rem]">
+      <section
+        id="services"
+        className="hidden lg:block mx-12 my-16 max-w-[70rem]"
+      >
         <h2 className="font-sans uppercase text-4xl font-extralight tracking-widest mb-[3rem]">
           А это будет интересно
         </h2>
@@ -248,7 +252,12 @@ export default function Home() {
           ))}
         </div>
       </section>
-
+      <section id="services-mobile" className="my-16 w-full">
+        <h2 className="font-sans uppercase text-4xl font-extralight tracking-widest text-center mb-[3rem]">
+          Mobile version
+        </h2>
+          <ServicesCarousel />
+      </section>
     </main>
   );
 }
