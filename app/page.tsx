@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { FaEye } from "react-icons/fa";
 
-
 import Bullet from "@/public/bullet.png";
 import FeedbackBackground from "@/public/feedback-bg.png";
 import ContactBackground from "@/public/contact-bg.png";
@@ -69,7 +68,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className="hidden lg:flex flex-col mx-12 my-20 max-w-[70rem]">
+      <section
+        id="services"
+        className="hidden lg:flex flex-col mx-12 my-20 max-w-[70rem]"
+      >
         <h2 className="font-sans uppercase text-4xl font-extralight tracking-widest mb-[3rem]">
           Мои предложения
         </h2>
@@ -212,14 +214,25 @@ export default function Home() {
         id="contact-form"
         className="relative hidden lg:block flex flex-col items-center w-full h-[49rem]"
       >
-        <Image
+        {/* <Image
           src={ContactBackground}
           alt="contact section background"
           width={2500}
           quality={95}
-          className="absolute -top-20 w-auto h-full z-[-1] object-cover"
-        />
-        <div className="flex flex-col justify-center items-center mx-12 my-20 max-w-[70rem] ">
+          className="absolute "
+        /> */}
+        <Image
+        src={ContactBackground}
+        alt="contact section background"
+        quality={95}
+        fill
+        sizes="50vw"
+        style={{
+          objectFit: "cover"
+        }}
+        className="absolute top-0 z-[-1]"
+      />
+        <div className="flex flex-col justify-center items-center mx-12 my-32 max-w-[70rem] ">
           <h2 className="font-sans uppercase text-4xl text-left w-full font-extralight tracking-widest mb-[3rem]">
             Остаемся на связи?
           </h2>
@@ -256,7 +269,7 @@ export default function Home() {
         <h2 className="font-sans uppercase text-4xl font-extralight tracking-widest text-center mb-[3rem]">
           Mobile version
         </h2>
-          <ServicesCarousel />
+        <ServicesCarousel />
       </section>
     </main>
   );

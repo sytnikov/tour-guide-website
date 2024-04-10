@@ -59,14 +59,13 @@ textarea::placeholder {
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 320px;
-  margin: auto 1rem;
+  margin: 3rem 1rem;
   text-align: center;
   font-family: arial;
 }
 
 .price {
-  color: grey;
-  font-size: 22px;
+  @apply text-gray-600 text-lg
 }
 
 .card button {
@@ -86,9 +85,9 @@ textarea::placeholder {
 }
 
 .react-multi-carousel-list.custom-list {
-  @apply overflow-visible
+  @apply overflow-hidden
 }
 
 .react-multi-carousel-dot-list.custom-dot-list {
-  @apply absolute -bottom-8 z-10
+  @apply absolute z-10
 }
