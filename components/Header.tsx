@@ -9,7 +9,7 @@ import Portrait from "@/public/olga.png";
 
 export default function Header() {
   return (
-    <header className="relative">
+    <header className="relative hidden lg:flex">
       <Image
         src={HeaderBgPeach}
         alt="Header Peach Background"
@@ -42,12 +42,11 @@ export default function Header() {
         priority
         className="absolute -z-[1] hidden lg:block lg:top-[33rem] lg:left-[16rem] xl:top-[35rem] xl:left-[20rem]"
       />
-      <div className="flex items-center h-[6rem] w-full mb-4 py-10 px-10 fixed z-[999] top-0 left-1/2 -translate-x-1/2 rounded-none bg-peach-light bg-opacity-70 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:h-[3.25rem] sm:w-[100%]">
+      <div className="hidden lg:flex items-center h-[6rem] w-full mb-4 py-10 px-10 fixed z-[999] top-0 left-1/2 -translate-x-1/2 rounded-none bg-peach-light bg-opacity-70 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:h-[3.25rem] sm:w-[100%]">
         <Image
           src={Logo}
           alt="Olga Korka logo"
           width={90}
-          height={70}
           quality={100}
           priority
           className="p-2"

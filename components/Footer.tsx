@@ -14,12 +14,12 @@ import BgFacebook from "@/public/icon-bg-facebook.png";
 
 export default function Footer() {
   return (
-    <footer className="relative pt-48 pb-5 flex flex-col items-center w-full">
+    <footer className="relative hidden lg:flex flex-col items-center w-full pt-48 pb-5">
       <Image
         src={FooterBackground}
         alt="footer section background"
         width={3500}
-        className="absolute top-0 w-full h-full -z-[5] object-cover"
+        className="absolute top-0 h-full -z-[5] object-cover"
       />
       <Image
         src={FooterLogo}

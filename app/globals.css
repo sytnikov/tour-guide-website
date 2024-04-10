@@ -48,4 +48,46 @@ textarea::placeholder {
   rounded-full px-3 py-3
 }
 
+/* carousel styles */
 
+.product--image {
+  width: 100%;
+  height: 16em;
+  object-fit: cover;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 320px;
+  margin: 3rem auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  @apply text-gray-600 text-lg
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+.react-multi-carousel-list.custom-list {
+  @apply overflow-hidden
+}
+
+.react-multi-carousel-dot-list.custom-dot-list {
+  @apply absolute z-10
+}
