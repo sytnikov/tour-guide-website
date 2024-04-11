@@ -1,24 +1,21 @@
-type ServiceProps = {
-  imageUrl: string,
-  name: string,
-  price: string,
-  description: string
-}
+import Image, { StaticImageData } from "next/image";
 
-export default function Service({imageUrl, name, price, description}: ServiceProps) {
+type ServiceProps = {
+  image: StaticImageData;
+  name: string;
+  source: string;
+};
+
+export default function Service({ image, name, source }: ServiceProps) {
   return (
-    <div className="card">
-      <img
-        className="product--image"
-        src={imageUrl}
-        alt="product image"
+    <div className="flex flex-col items-center justify-center gap-3 text-center md:mx-10 lg:mx-2">
+      <Image
+        src={image}
+        alt="service image"
+        className="border-none rounded-2xl"
       />
-      <h2>{name}</h2>
-      <p className="price">{price}</p>
-      <p>{description}</p>
-      <p>
-        <button>Add to Cart</button>
-      </p>
+      <h2 className="font-normal text-lg md:text-sm w-[70%]">{name}</h2>
+      <p className="w-[70%] pb-16 ">{source}</p>
     </div>
   );
 }

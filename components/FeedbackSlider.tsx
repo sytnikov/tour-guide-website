@@ -1,51 +1,48 @@
 "use client";
 
-import Carousel from "nuka-carousel";
-import { IoIosArrowRoundForward } from "react-icons/io";
-import { IoIosArrowRoundBack } from "react-icons/io";
-import Image from "next/image";
+import React from "react";
 
 import { feedbackEntries } from "@/lib/data";
+import Carousel from "react-multi-carousel";
+import FeedbackEntry from "./FeedbackEntry";
 
-export default function FeedbackSlider() {
-  const params = {
-    // wrapAround: true,
-    style: {
-      maxWidth: "70rem",
+export default function FeedbackSliderCarousel() {
+  const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 1024 },
+      items: 1,
     },
-    defaultControlsConfig: {
-      nextButtonStyle: {
-        background: "white opacity-100",
-        color: "black",
-        fontSize: "3rem",
-      },
-      prevButtonStyle: {
-        background: "white opacity-100",
-        color: "black",
-        fontSize: "3rem",
-      },
-      nextButtonText: <IoIosArrowRoundForward />,
-      prevButtonText: <IoIosArrowRoundBack />,
-      pagingDotsStyle: {
-        margin: "0.5rem",
-      },
+    desktop: {
+      breakpoint: { max: 1024, min: 800 },
+      items: 1,
+    },
+    tablet: {
+      breakpoint: { max: 800, min: 464 },
+      items: 1,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
     },
   };
-
   return (
-    <Carousel {...params}>
-      {feedbackEntries.map((entry, index) => (
-        <div key={index} className="flex flex-col justify-center px-28 py-16">
-          <div className="flex items-center gap-4 mb-6">
-            <Image src={entry.avatar} alt="avatar image" width={90} className="rounded-full"/>
-            <div>
-              <h3 className="font-medium mb-3">{entry.name}</h3>
-              <p className="font-medium mb-4">{entry.date}</p>
-            </div>
-          </div>
-          <p>{entry.text}</p>
-        </div>
-      ))}
-    </Carousel>
+    <Carousel
+    responsive={responsive}
+    arrows={false}
+    showDots={true}
+    containerClass="custom-list"
+    dotListClass="custom-dot-list-feedback"
+  >
+    {feedbackEntries.map((service, index) => (
+      <React.Fragment key={index}>
+        <FeedbackEntry
+          avatar={service.avatar}
+          name={service.name}
+          date={service.date}
+          text={service.text}
+        />
+      </React.Fragment>
+    ))}
+  </Carousel>
   );
 }

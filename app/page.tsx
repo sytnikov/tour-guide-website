@@ -5,44 +5,85 @@ import Bullet from "@/public/bullet.png";
 import FeedbackBackground from "@/public/feedback-bg.png";
 import ContactBackground from "@/public/contact-bg.png";
 import Link from "next/link";
-import FeedbackSlider from "@/components/FeedbackSlider";
+// import FeedbackSlider from "@/components/FeedbackSlider";
 import { articles, offers, yourDesires } from "@/lib/data";
 import OlgaPortrait from "@/public/olga-about.png";
 import ContactForm from "@/components/ContactForm";
 import ServicesCarousel from "@/components/ServicesCarousel";
+import FeedbackSlider from "@/components/FeedbackSlider";
+import HeaderBgPeach from "@/public/header-bg-yellow.png";
+import HeaderBgWhite from "@/public/header-bg-white.png";
+import HeaderStain from "@/public/header-stain.png";
+import Portrait from "@/public/olga.png";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center">
-      <section
-        id="front-section"
-        className="relative hidden lg:flex flex-col sm:w-[35rem] md:w-[45rem] lg:w-[60rem] xl:w-[70rem] max-w-[80rem] mt-48 mb-20 gap-6"
-      >
-        <h1 className="text-2xl font-medium">Лекторий Ольги Корка</h1>
-        <h2 className="font-sans uppercase lg:text-4xl xl:text-5xl font-extralight tracking-widest mb-[2rem]">
-          Объясняя Финляндию
-        </h2>
+      <section id="front-section" className="relative w-full h-[50rem]">
+        <Image
+          src={HeaderBgPeach}
+          alt="Header Peach Background"
+          quality={95}
+          fill
+          sizes="100vw"
+          style={{
+            objectFit: "cover",
+          }}
+          className="absolute top-0 -z-[10]"
+          priority
+        />
+        <Image
+          src={Portrait}
+          alt="Olga Korka Portrait"
+          // width={500}
+          quality={95}
+          priority
+          className="absolute -z-[4] w-[22rem] lg:w-[33rem] top-[27rem] right-3 lg:top-32 lg:right-24 xl:right-20 2xl:right-24 overflow-hidden"
+        />
+        <Image
+          src={HeaderBgWhite}
+          alt="Header White Background"
+          quality={95}
+          className="absolute top-[46rem] lg:top-[33rem] -z-[2]"
+          priority
+        />
+        <Image
+          src={HeaderStain}
+          alt="Header Stain Image"
+          width={200}
+          quality={95}
+          priority
+          className="absolute -z-[1] hidden lg:block lg:top-[33rem] lg:left-[16rem] xl:top-[35rem] xl:left-[20rem]"
+        />
+        <div className="flex flex-col text-center lg:text-left sm:w-full md:w-[45rem] lg:w-[60rem] xl:w-[70rem] max-w-[80rem] mx-3 lg:mx-0 mt-48 mb-20 gap-6 z-10">
+          <h1 className="text-2xl font-medium lg:mx-10">
+            Лекторий Ольги Корка
+          </h1>
+          <h2 className="font-sans uppercase text-4xl xl:text-5xl font-extralight tracking-widest lg:mx-10 lg:mb-[2rem]">
+            Объясняя Финляндию
+          </h2>
 
-        <p className="text-xl w-1/2 mb-[2rem]">
-          Образовательное пространство для тех, кто хочет сделать Финляндию
-          своим домом
-        </p>
-        <button className="w-[8rem] h-[2.5rem] text-white font-normal bg-blue-main rounded-md ">
-          Связаться
-        </button>
+          <p className="text-left text-xl lg:w-1/2 mb-[2rem] font-extralight mx-5 lg:mx-10 leading-relaxed">
+            Образовательное пространство для тех, кто хочет сделать Финляндию
+            своим домом
+          </p>
+          <button className="w-[8rem] h-[2.5rem] mx-5 lg:mx-10 text-white font-normal bg-blue-main rounded-md ">
+            Связаться
+          </button>
+        </div>
       </section>
 
       <section
         id="description"
-        className="hidden lg:flex flex-col text-xl font-light max-w-[70rem] mx-12 mt-32 mb-20 px-16"
+        className="flex flex-col gap-6 text-xl font-extralight max-w-[70rem] mx-10 lg:mx-12 lg:mt-32 lg:mb-20 lg:px-16 leading-relaxed"
       >
-        <p className="mt-16">
+        <p className="mt-12 lg:mt-24">
           Проект создан для того, чтобы все русскоязычные жители Финляндии, а
           также те, кто интересуется финским языком, культурой и историей,
           построили глубокую и прочную связь со страной через понимание и
           принятие её культурно-исторических особенностей.
         </p>
-        <p className="mt-6">
+        <p>
           Если вы цените свободу и толерантность, если вами движет любопытство,
           страсть к познанию и развитию, нам есть о чём поговорить!
         </p>
@@ -50,32 +91,33 @@ export default function Home() {
 
       <section
         id="advantages"
-        className="hidden lg:flex flex-col mx-12 my-20 max-w-[70rem]"
       >
-        <h2 className="font-sans uppercase text-4xl font-extralight tracking-widest mb-[3rem]">
-          Если вы хотите:
-        </h2>
-        <div>
-          {yourDesires.map((item, index) => (
-            <div
-              key={index}
-              className="flex items-center text-xl font-extralight gap-7 mb-6"
-            >
-              <Image src={Bullet} alt="bullet icon" width={30} />
-              <p>{item.text}</p>
-            </div>
-          ))}
+        <div className="mx-6 lg:mx-12 my-20 max-w-[70rem]">
+          <h2 className="text-center lg:text-left font-sans uppercase text-3xl lg:text-4xl font-extralight tracking-widest mb-[3rem]">
+            Если вы хотите:
+          </h2>
+          <div>
+            {yourDesires.map((item, index) => (
+              <div
+                key={index}
+                className="flex items-center text-base lg:text-xl font-extralight gap-7 mb-6"
+              >
+                <Image src={Bullet} alt="bullet icon" width={30} />
+                <p>{item.text}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       <section
         id="services"
-        className="hidden lg:flex flex-col mx-12 my-20 max-w-[70rem]"
+        className="flex flex-col mx-0 lg:mx-12 my-8 lg:my-20 max-w-[70rem]"
       >
-        <h2 className="font-sans uppercase text-4xl font-extralight tracking-widest mb-[3rem]">
+        <h2 className="text-center font-sans uppercase text-3xl lg:text-4xl font-extralight tracking-widest lg:mb-[3rem]">
           Мои предложения
         </h2>
-        <div className="grid grid-cols-3 gap-4 mt-16">
+        <div className="grid grid-col-1 gap-10 lg:grid-cols-3 lg:gap-4 mt-8 lg:mt-16">
           {offers.map((offer, index) => (
             <div key={index} className="flex flex-col items-center">
               <Image
@@ -150,39 +192,42 @@ export default function Home() {
 
       <section
         id="feedback"
-        className="relative hidden lg:flex flex-col items-center w-full"
+        className="relative my-8 lg:my-16 w-full h-[40rem] lg:h-[35rem]"
       >
         <Image
           src={FeedbackBackground}
           alt="feedback section background"
-          width={2500}
-          className="absolute top-0 left-0 w-auto h-full z-[-1] object-cover"
+          quality={95}
+          fill
+          sizes="100vw"
+          style={{
+            objectFit: "cover",
+          }}
+          className="absolute z-[-1]"
         />
 
-        <div className="flex flex-col justify-center items-center mx-12 my-20 max-w-[70rem]">
-          <h2 className="text-left font-sans uppercase text-4xl font-extralight tracking-widest w-full">
-            Впечатления
-          </h2>
-          <FeedbackSlider />
-        </div>
+        <h2 className="text-center lg:text-left font-sans uppercase text-3xl lg:text-4xl font-extralight tracking-widest w-full mt-28 lg:mt-16 lg:px-28">
+          Впечатления
+        </h2>
+        <FeedbackSlider />
       </section>
 
       <section
         id="about"
-        className="hidden lg:flex flex-col font-light max-w-[70rem] mx-12 mt-32 mb-36"
+        className="font-light max-w-[70rem] lg:mx-12 lg:mt-32 mb-36"
       >
-        <h2 className="font-sans uppercase text-4xl font-extralight tracking-widest">
+        <h2 className="text-center lg:text-left font-sans uppercase text-4xl font-extralight tracking-widest mb-6">
           Обо мне
         </h2>
-        <div className="flex flex-col lg:flex-row items-center">
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-0">
           <Image
             src={OlgaPortrait}
             alt="Olga Korka portrait"
             width={500}
             quality={100}
-            className="p-2 mr-20"
+            className="lg:p-2 lg:mr-20"
           />
-          <p className="text-base max-w-[20rem] ml-6 mr-12">
+          <p className="text-base mx-16 font-extralight leading-relaxed lg:max-w-[20rem] lg:ml-6 lg:mr-12">
             Я Ольга Корка. Моя основная работа связана с антиквариатом, отсюда
             и увлечение историей, культурой и искусством. Люблю Хельсинки, живу
             здесь 10 лет, не устаю открывать для себя все новые стороны этого
@@ -212,28 +257,21 @@ export default function Home() {
 
       <section
         id="contact-form"
-        className="relative hidden lg:block flex flex-col items-center w-full h-[49rem]"
+        className="relative w-full h-[40rem]"
       >
-        {/* <Image
+        <Image
           src={ContactBackground}
           alt="contact section background"
-          width={2500}
           quality={95}
-          className="absolute "
-        /> */}
-        <Image
-        src={ContactBackground}
-        alt="contact section background"
-        quality={95}
-        fill
-        sizes="50vw"
-        style={{
-          objectFit: "cover"
-        }}
-        className="absolute top-0 z-[-1]"
-      />
-        <div className="flex flex-col justify-center items-center mx-12 my-32 max-w-[70rem] ">
-          <h2 className="font-sans uppercase text-4xl text-left w-full font-extralight tracking-widest mb-[3rem]">
+          fill
+          sizes="50vw"
+          style={{
+            objectFit: "cover",
+          }}
+          className="absolute top-0 z-[-1]"
+        />
+        <div className="flex flex-col justify-center items-center mx-12">
+          <h2 className="font-sans uppercase text-center lg:text-left text-3xl lg:text-4xl font-extralight tracking-widest mt-20 mb-4 lg:mb-[3rem]">
             Остаемся на связи?
           </h2>
           <ContactForm />
@@ -247,6 +285,7 @@ export default function Home() {
         <h2 className="font-sans uppercase text-4xl font-extralight tracking-widest mb-[3rem]">
           А это будет интересно
         </h2>
+        {/* use Service component here */}
         <div className="grid grid-cols-3 gap-4 mt-16">
           {articles.map((article, index) => (
             <div key={index} className="flex flex-col items-center">
@@ -255,7 +294,7 @@ export default function Home() {
                 alt="article picture"
                 height={300}
                 quality={95}
-                className="mb-6"
+                className="rounded-2xl mb-6"
               />
               <div className="flex flex-col items-start mx-10">
                 <h3 className="font-light mb-8">{article.name}</h3>
@@ -265,9 +304,10 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section id="services-mobile" className="my-16 w-full">
-        <h2 className="font-sans uppercase text-4xl font-extralight tracking-widest text-center mb-[3rem]">
-          Mobile version
+
+      <section id="services-mobile" className="lg:hidden my-16 w-full">
+        <h2 className="font-sans uppercase text-3xl font-extralight tracking-widest text-center mb-[3rem]">
+          А это будет интересно
         </h2>
         <ServicesCarousel />
       </section>
