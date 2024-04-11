@@ -50,22 +50,12 @@ textarea::placeholder {
 
 /* carousel styles */
 
-.product--image {
-  width: 100%;
-  height: 16em;
-  object-fit: cover;
-}
-
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 320px;
   margin: 3rem auto;
   text-align: center;
   font-family: arial;
-}
-
-.price {
-  @apply text-gray-600 text-lg
 }
 
 .card button {
@@ -85,9 +75,21 @@ textarea::placeholder {
 }
 
 .react-multi-carousel-list.custom-list {
-  @apply overflow-hidden
+  @apply overflow-hidden md:mx-10
 }
 
-.react-multi-carousel-dot-list.custom-dot-list {
-  @apply absolute z-10
+.react-multi-carousel-list.custom-list > ul > li > button {
+  @apply w-2 h-2 mx-2
+}
+
+.react-multi-carousel-dot-list.custom-dot-list-service button {
+  @apply border-none bg-blue-light
+}
+
+.react-multi-carousel-dot-list.custom-dot-list-feedback button {
+  @apply border-none bg-white
+}
+
+.react-multi-carousel-dot.react-multi-carousel-dot--active button{
+  @apply bg-blue-dark
 }

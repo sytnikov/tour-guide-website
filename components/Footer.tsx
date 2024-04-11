@@ -11,6 +11,7 @@ import BgInstagram from "@/public/icon-bg-instagram.png";
 import BgMail from "@/public/icon-bg-mail.png";
 import BgGmail from "@/public/icon-bg-gmail.png";
 import BgFacebook from "@/public/icon-bg-facebook.png";
+import FeedbackSliderCarousel from "./FeedbackSlider";
 
 export default function Footer() {
   return (
@@ -29,6 +30,7 @@ export default function Footer() {
         quality={95}
         className="absolute -top-10 left-20 -z-[5] object-cover"
       />
+      <FeedbackSliderCarousel />
       <div className="flex items-center justify-center gap-10 w-full">
         <div>
           <p className="text-white text-lg">Вопросы по экскурсиям и не только</p>

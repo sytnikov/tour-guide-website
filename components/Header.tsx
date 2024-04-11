@@ -2,46 +2,10 @@ import Image from "next/image";
 
 import { navLinks } from "@/lib/data";
 import Logo from "@/public/logo.png";
-import HeaderBgPeach from "@/public/header-bg-yellow.png";
-import HeaderBgWhite from "@/public/header-bg-white.png";
-import HeaderStain from "@/public/header-stain.png";
-import Portrait from "@/public/olga.png";
 
 export default function Header() {
   return (
-    <header className="relative hidden lg:flex">
-      <Image
-        src={HeaderBgPeach}
-        alt="Header Peach Background"
-        width={2500}
-        quality={95}
-        priority
-        className="absolute -z-[5] top-0 w-auto"
-      />
-      <Image
-        src={Portrait}
-        alt="Olga Korka Portrait"
-        width={700}
-        quality={95}
-        priority
-        className="absolute -z-[3] hidden lg:block top-20 lg:-right-20 xl:-right-10 2xl:right-24 "
-      />
-      <Image
-        src={HeaderBgWhite}
-        alt="Header White Background"
-        width={2500}
-        quality={95}
-        priority
-        className="absolute -z-[1] top-[33rem] w-auto"
-      />
-      <Image
-        src={HeaderStain}
-        alt="Header Stain Image"
-        width={200}
-        quality={95}
-        priority
-        className="absolute -z-[1] hidden lg:block lg:top-[33rem] lg:left-[16rem] xl:top-[35rem] xl:left-[20rem]"
-      />
+    <header>
       <div className="hidden lg:flex items-center h-[6rem] w-full mb-4 py-10 px-10 fixed z-[999] top-0 left-1/2 -translate-x-1/2 rounded-none bg-peach-light bg-opacity-70 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:h-[3.25rem] sm:w-[100%]">
         <Image
           src={Logo}
