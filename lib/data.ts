@@ -14,7 +14,7 @@ export const navLinks = [
   "Прогулки",
   "Блог",
   "Об авторе",
-  "Задать вопрос",
+  "Отзывы",
 ] as const;
 
 export const yourDesires = [
@@ -54,7 +54,7 @@ export const offers = [
     description: "Объемное представление о городе за 2 часа",
     image: Offer3,
   },
-]
+] as const
 
 export const feedbackEntries = [
   {

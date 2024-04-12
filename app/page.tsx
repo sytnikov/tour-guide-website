@@ -38,24 +38,23 @@ export default function Home() {
           // width={500}
           quality={95}
           priority
-          className="absolute -z-[4] w-[22rem] lg:w-[33rem] top-[27rem] right-3 lg:top-32 lg:right-24 xl:right-20 2xl:right-24 overflow-hidden"
+          className="absolute -z-[4] w-[22rem]  top-[20rem] right-3 lg:w-[33rem] lg:top-32 lg:right-24 xl:right-20 2xl:right-24 overflow-hidden"
         />
         <Image
           src={HeaderBgWhite}
           alt="Header White Background"
           quality={95}
-          className="absolute top-[46rem] lg:top-[33rem] -z-[2]"
+          className="absolute top-[39rem] lg:top-[33rem] -z-[2]"
           priority
         />
         <Image
           src={HeaderStain}
           alt="Header Stain Image"
-          width={200}
           quality={95}
           priority
-          className="absolute -z-[1] hidden lg:block lg:top-[33rem] lg:left-[16rem] xl:top-[35rem] xl:left-[20rem]"
+          className="absolute -z-[1] w-[6rem] top-[38.5rem] left-5 lg:w-[12rem] lg:top-[34rem] lg:left-[16rem] xl:top-[35rem] xl:left-[20rem]"
         />
-        <div className="flex flex-col text-center lg:text-left sm:w-full md:w-[45rem] lg:w-[60rem] xl:w-[70rem] max-w-[80rem] mx-3 lg:mx-0 mt-32 lg:mt-48 mb-20 gap-6 z-10">
+        <div className="flex flex-col text-center lg:text-left sm:w-full md:w-[45rem] lg:w-[60rem] xl:w-[70rem] max-w-[80rem] mx-3 lg:mx-0 mt-10 lg:mt-48 mb-20 gap-6 z-10">
           <h1 className="text-2xl font-medium lg:mx-10 xl:mx-16">
             Лекторий Ольги Корка
           </h1>
@@ -77,7 +76,7 @@ export default function Home() {
         id="description"
         className="flex flex-col gap-6 text-xl font-extralight max-w-[70rem] mx-10 lg:mx-12 lg:mt-32 lg:mb-20 lg:px-16 leading-relaxed"
       >
-        <p className="mt-12 lg:mt-24">
+        <p className="-mt-10 lg:mt-24">
           Проект создан для того, чтобы все русскоязычные жители Финляндии, а
           также те, кто интересуется финским языком, культурой и историей,
           построили глубокую и прочную связь со страной через понимание и
