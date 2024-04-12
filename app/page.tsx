@@ -55,19 +55,19 @@ export default function Home() {
           priority
           className="absolute -z-[1] hidden lg:block lg:top-[33rem] lg:left-[16rem] xl:top-[35rem] xl:left-[20rem]"
         />
-        <div className="flex flex-col text-center lg:text-left sm:w-full md:w-[45rem] lg:w-[60rem] xl:w-[70rem] max-w-[80rem] mx-3 lg:mx-0 mt-48 mb-20 gap-6 z-10">
-          <h1 className="text-2xl font-medium lg:mx-10">
+        <div className="flex flex-col text-center lg:text-left sm:w-full md:w-[45rem] lg:w-[60rem] xl:w-[70rem] max-w-[80rem] mx-3 lg:mx-0 mt-32 lg:mt-48 mb-20 gap-6 z-10">
+          <h1 className="text-2xl font-medium lg:mx-10 xl:mx-16">
             Лекторий Ольги Корка
           </h1>
-          <h2 className="font-sans uppercase text-4xl xl:text-5xl font-extralight tracking-widest lg:mx-10 lg:mb-[2rem]">
+          <h2 className="font-sans uppercase text-4xl xl:text-5xl font-extralight tracking-widest lg:mx-10 xl:mx-16 lg:mb-[2rem]">
             Объясняя Финляндию
           </h2>
 
-          <p className="text-left text-xl lg:w-1/2 mb-[2rem] font-extralight mx-5 lg:mx-10 leading-relaxed">
+          <p className="text-left text-xl lg:w-1/2 mb-[2rem] font-extralight mx-5 lg:mx-10 xl:mx-16 leading-relaxed">
             Образовательное пространство для тех, кто хочет сделать Финляндию
             своим домом
           </p>
-          <button className="w-[8rem] h-[2.5rem] mx-5 lg:mx-10 text-white font-normal bg-blue-main rounded-md ">
+          <button className="w-[8rem] h-[2.5rem] mx-5 lg:mx-10 xl:mx-16 text-white font-normal bg-blue-main rounded-md ">
             Связаться
           </button>
         </div>
