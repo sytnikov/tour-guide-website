@@ -35,43 +35,17 @@ textarea::placeholder {
 /* button styles */
 
 .btn {
-  @apply flex items-center justify-center gap-2
+  @apply flex items-center justify-center gap-4
 }
 
 .btn-submit {
-  @apply h-[3.5rem] w-[12rem] bg-coral-main rounded-xl
+  @apply px-8 py-3 bg-coral-main rounded-xl
   text-white
 }
 
 .btn-icon {
   @apply text-2xl text-black px-4 cursor-pointer
   rounded-full px-3 py-3
-}
-
-/* carousel styles */
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 320px;
-  margin: 3rem auto;
-  text-align: center;
-  font-family: arial;
-}
-
-.card button {
-  border: none;
-  outline: 0;
-  padding: 12px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
-
-.card button:hover {
-  opacity: 0.7;
 }
 
 .react-multi-carousel-list.custom-list {

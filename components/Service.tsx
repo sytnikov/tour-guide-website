@@ -15,7 +15,7 @@ export default function Service({ image, name, source }: ServiceProps) {
         className="border-none rounded-2xl"
       />
       <h2 className="font-normal text-lg md:text-sm w-[70%]">{name}</h2>
-      <p className="w-[70%] pb-16 ">{source}</p>
+      <p className="w-[70%] pb-10 ">{source}</p>
     </div>
   );
 }
