@@ -3,7 +3,6 @@ import { FaEye } from "react-icons/fa";
 
 import Bullet from "@/public/bullet.png";
 import FeedbackBackground from "@/public/feedback-bg.png";
-import ContactBackground from "@/public/contact-bg.png";
 import Link from "next/link";
 // import FeedbackSlider from "@/components/FeedbackSlider";
 import { articles, offers, yourDesires } from "@/lib/data";
@@ -15,10 +14,12 @@ import HeaderBgPeach from "@/public/header-bg-yellow.png";
 import HeaderBgWhite from "@/public/header-bg-white.png";
 import HeaderStain from "@/public/header-stain.png";
 import Portrait from "@/public/olga.png";
+import NewsletterSubscription from "@/components/NewsletterSubscription";
+import StayInTouch from "@/components/StayInTouch";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center">
+    <main className="min-h-screen">
       <section id="front-section" className="relative w-full h-[50rem]">
         <Image
           src={HeaderBgPeach}
@@ -54,7 +55,7 @@ export default function Home() {
           priority
           className="absolute -z-[1] w-[6rem] top-[38.5rem] left-5 lg:w-[12rem] lg:top-[34rem] lg:left-[16rem] xl:top-[35rem] xl:left-[20rem]"
         />
-        <div className="flex flex-col text-center lg:text-left sm:w-full md:w-[45rem] lg:w-[60rem] xl:w-[70rem] max-w-[80rem] mx-3 lg:mx-0 mt-10 lg:mt-48 mb-20 gap-6 z-10">
+        <div className="flex flex-col text-center lg:text-left sm:w-full md:w-[45rem] lg:w-[60rem] xl:w-[70rem] max-w-[80rem] mx-3 lg:mx-0 pt-10 lg:pt-48 mb-20 gap-6 z-10">
           <h1 className="text-2xl font-medium lg:mx-10 xl:mx-16">
             Лекторий Ольги Корка
           </h1>
@@ -76,7 +77,7 @@ export default function Home() {
         id="description"
         className="flex flex-col gap-6 text-xl font-extralight max-w-[70rem] mx-10 lg:mx-12 lg:mt-32 lg:mb-20 lg:px-16 leading-relaxed"
       >
-        <p className="-mt-10 lg:mt-24">
+        <p className="-mt-10 lg:mt-0">
           Проект создан для того, чтобы все русскоязычные жители Финляндии, а
           также те, кто интересуется финским языком, культурой и историей,
           построили глубокую и прочную связь со страной через понимание и
@@ -88,9 +89,7 @@ export default function Home() {
         </p>
       </section>
 
-      <section
-        id="advantages"
-      >
+      <section id="advantages">
         <div className="mx-6 lg:mx-12 my-20 max-w-[70rem]">
           <h2 className="text-center lg:text-left font-sans uppercase text-3xl lg:text-4xl font-extralight tracking-widest mb-[3rem]">
             Если вы хотите:
@@ -211,10 +210,7 @@ export default function Home() {
         <FeedbackSlider />
       </section>
 
-      <section
-        id="about"
-        className="font-light max-w-[70rem] lg:mx-12 lg:mt-32 mb-36"
-      >
+      <section id="about" className="font-light w-full lg:mx-12 lg:mt-32 mb-36">
         <h2 className="text-center lg:text-left font-sans uppercase text-4xl font-extralight tracking-widest mb-6">
           Обо мне
         </h2>
@@ -254,27 +250,8 @@ export default function Home() {
         </div>
       </section> */}
 
-      <section
-        id="contact-form"
-        className="relative w-full h-[40rem]"
-      >
-        <Image
-          src={ContactBackground}
-          alt="contact section background"
-          quality={95}
-          fill
-          sizes="50vw"
-          style={{
-            objectFit: "cover",
-          }}
-          className="absolute top-0 z-[-1]"
-        />
-        <div className="flex flex-col justify-center items-center mx-12">
-          <h2 className="font-sans uppercase text-center lg:text-left text-3xl lg:text-4xl font-extralight tracking-widest mt-20 mb-4 lg:mb-[3rem]">
-            Остаемся на связи?
-          </h2>
-          <ContactForm />
-        </div>
+      <section id="contact-form">
+        <StayInTouch />
       </section>
 
       <section
