@@ -24,7 +24,7 @@ export default function Header() {
   return (
     <header>
       <Popover>
-        <div className="hidden lg:flex items-center h-[6rem] w-full mb-4 py-10 px-10 fixed z-[999] top-0 left-1/2 -translate-x-1/2 rounded-none bg-[transparent] bg-opacity-70 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:h-[3.25rem] sm:w-[100%]">
+        <div className="hidden lg:flex items-center h-[6rem] mb-4 py-10 px-10 fixed z-[999] top-0 left-1/2 -translate-x-1/2 rounded-none bg-[transparent] bg-opacity-70 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:h-[3.25rem] sm:w-[100%]">
           <Image
             src={Logo}
             alt="Olga Korka logo"

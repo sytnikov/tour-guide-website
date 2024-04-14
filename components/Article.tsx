@@ -1,12 +1,12 @@
 import Image, { StaticImageData } from "next/image";
 
-type ServiceProps = {
+type ArticleProps = {
   image: StaticImageData;
   name: string;
   source: string;
 };
 
-export default function Service({ image, name, source }: ServiceProps) {
+export default function Article({ image, name, source }: ArticleProps) {
   return (
     <div className="flex flex-col items-center justify-center gap-3 text-center md:mx-10 lg:mx-2">
       <Image
