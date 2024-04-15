@@ -74,16 +74,26 @@ export default function Header() {
             >
               <Popover.Panel className="absolute z-[1000] inset-x-0 top-0 origin-top-right transform transition md:hidden">
                 <div className=" bg-[#FBD9C1] shadow-lg ring-1 ring-black ring-opacity-5 divide-y-2 divide-gray-50 min-h-screen">
-                  <div className="px-8 pt-8 pb-6">
-                    <div className="flex items-center justify-end pb-10">
-                      <div>
-                        <Popover.Button className="inline-flex items-center rounded-md text-black">
-                          <span className="sr-only">Close menu</span>
-                          <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-                        </Popover.Button>
+                  <div className="mx-4">
+                    <div className="flex">
+                      <Image
+                        src={Logo}
+                        alt="Olga Korka logo"
+                        width={70}
+                        quality={100}
+                        priority
+                        className="my-4"
+                      />
+                      <div className="flex grow items-center justify-end my-4">
+                        
+                          <Popover.Button className="inline-flex items-center rounded-md text-black">
+                            <span className="sr-only">Close menu</span>
+                            <XMarkIcon className="h-8 w-8" aria-hidden="true" />
+                          </Popover.Button>
+                        
                       </div>
                     </div>
-                    <h2 className="uppercase font-medium text-2xl mb-12">Меню</h2>
+
                     <div className="mt-6 mb-12">
                       <ul className="flex flex-col items-start gap-y-8 text-xl">
                         {navLinks.map((link, index) => (

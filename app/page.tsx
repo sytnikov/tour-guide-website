@@ -109,60 +109,59 @@ export default function Home() {
         </div>
       </section>
 
-      <section
-        id="services"
-        className="flex flex-col mx-0 lg:mx-12 my-8 lg:my-20 max-w-[70rem]"
-      >
-        <h2 className="text-center font-sans uppercase text-3xl lg:text-4xl font-extralight tracking-widest lg:mb-[3rem]">
-          Мои предложения
-        </h2>
-        <div className="grid grid-col-1 gap-10 lg:grid-cols-3 lg:gap-4 mt-8 lg:mt-16">
-          {offers.map((offer, index) => (
-            <div key={index} className="flex flex-col items-center">
-              <Image
-                src={offer.image}
-                alt="offer picture"
-                width={250}
-                className="mb-6"
-              />
-              <div className="flex flex-col items-start mx-16">
-                <h3 className="uppercase font-medium mb-2">{offer.name}</h3>
-                <p className="max-w-[30ch] mb-6">{offer.description}</p>
-                <Link href="#" className="btn text-coral-main ">
-                  <FaEye />
-                  Узнать больше
-                </Link>
+      <section id="services">
+        <div className="mx-0 my-10">
+          <h2 className="text-center font-sans uppercase text-3xl lg:text-4xl font-extralight tracking-widest mb-[2rem]">
+            Мои предложения
+          </h2>
+          <div className="grid grid-col-1 gap-10 lg:grid-cols-3">
+            {/* make an offer component */}
+            {offers.map((offer, index) => (
+              <div key={index} className="flex flex-col items-center">
+                <Image
+                  src={offer.image}
+                  alt="offer picture"
+                  width={250}
+                  className="mb-6"
+                />
+                <div className="flex flex-col items-start mx-16">
+                  <h3 className="uppercase font-medium mb-2">{offer.name}</h3>
+                  <p className="max-w-[30ch] mb-6">{offer.description}</p>
+                  <Link href="#" className="btn text-coral-main ">
+                    <FaEye />
+                    Узнать больше
+                  </Link>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
-      <section
-        id="feedback"
-        className="relative my-8 lg:my-16 w-full h-[40rem] lg:h-[35rem]"
-      >
-        <Image
-          src={FeedbackBackground}
-          alt="feedback section background"
-          quality={95}
-          fill
-          sizes="100vw"
-          style={{
-            objectFit: "cover",
-          }}
-          className="absolute z-[-1]"
-        />
+      <section id="feedback">
+        <div className="relative w-full h-[40rem] lg:h-[35rem]">
+          <Image
+            src={FeedbackBackground}
+            alt="feedback section background"
+            quality={95}
+            fill
+            sizes="100vw"
+            style={{
+              objectFit: "cover",
+            }}
+            className="absolute z-[-1]"
+          />
 
-        <h2 className="text-center lg:text-left font-sans uppercase text-3xl lg:text-4xl font-extralight tracking-widest w-full mt-28 lg:mt-16 lg:px-28">
-          Впечатления
-        </h2>
-        <FeedbackSlider />
+          <h2 className="text-center lg:text-left font-sans uppercase text-3xl lg:text-4xl font-extralight tracking-widest pt-28 lg:pt-20 lg:px-36">
+            Впечатления
+          </h2>
+          <FeedbackSlider />
+        </div>
       </section>
 
       <section id="about">
-        <div className="font-light mx-0 lg:mx-10 my-10 max-w-[70rem]">
-          <h2 className="text-center font-sans uppercase text-4xl font-extralight tracking-widest mb-4 lg:mb-0">
+        <div className="font-light mx-0 lg:mx-10 my-10">
+          <h2 className="text-center font-sans uppercase text-3xl lg:text-4xl font-extralight tracking-widest mb-[2rem]">
             Обо мне
           </h2>
           <div className="flex flex-col lg:flex-row items-center justify-center gap-8">
@@ -192,14 +191,14 @@ export default function Home() {
             }}
             className="absolute top-0 z-[-1]"
           />
-          <h2 className="font-sans font-extralight uppercase text-center text-3xl lg:text-4xl tracking-widest mx-10 pt-28 lg:pt-36 mb-8 lg:mb-[3rem]">
+          <h2 className="font-sans font-extralight uppercase text-center text-3xl lg:text-4xl tracking-widest mx-10 pt-28 lg:pt-36 mb-[2rem]">
             Остаемся на связи
           </h2>
           <ContactForm />
         </div>
       </section>
 
-      <section id="services" className="hidden lg:block">
+      <section id="articles" className="hidden lg:block">
         <div className="mx-10 my-16">
           <h2 className="font-sans uppercase text-4xl font-extralight tracking-widest mb-[3rem]">
             А это будет интересно
@@ -217,8 +216,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="services-mobile" className="lg:hidden my-16 w-full">
-        <h2 className="font-sans uppercase text-3xl font-extralight tracking-widest text-center mb-[3rem]">
+      <section id="articles-mobile" className="lg:hidden my-16 w-full">
+        <h2 className="font-sans uppercase text-3xl font-extralight tracking-widest text-center mb-[2rem]">
           А это будет интересно
         </h2>
         <ArticlesCarousel />
