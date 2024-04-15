@@ -86,7 +86,7 @@ export default function Header() {
                       />
                       <div className="flex grow items-center justify-end my-4">
                         
-                          <Popover.Button className="inline-flex items-center rounded-md text-black">
+                          <Popover.Button onClick={handleClosePopover} className="inline-flex items-center rounded-md text-black">
                             <span className="sr-only">Close menu</span>
                             <XMarkIcon className="h-8 w-8" aria-hidden="true" />
                           </Popover.Button>

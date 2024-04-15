@@ -1,12 +1,17 @@
 import React from "react";
 import Image from "next/image";
-import { FaEye } from "react-icons/fa";
 
 import Bullet from "@/public/bullet.png";
 import FeedbackBackground from "@/public/feedback-bg.png";
-import Link from "next/link";
+
 // import FeedbackSlider from "@/components/FeedbackSlider";
-import { aboutMe, articleData, offers, yourDesires } from "@/lib/data";
+import {
+  aboutMe,
+  articleData,
+  offers,
+  projectDescription,
+  yourDesires,
+} from "@/lib/data";
 import OlgaPortrait from "@/public/olga-about.png";
 import ArticlesCarousel from "@/components/ArticlesCarousel";
 import FeedbackSlider from "@/components/FeedbackSlider";
@@ -17,82 +22,75 @@ import Portrait from "@/public/olga.png";
 import Article from "@/components/Article";
 import ContactBackground from "@/public/contact-bg.png";
 import ContactForm from "@/components/ContactForm";
+import Offer from "@/components/Offer";
 
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden">
-      <section id="front-section" className="relative w-full h-[50rem]">
-        <Image
-          src={HeaderBgPeach}
-          alt="Header Peach Background"
-          quality={95}
-          fill
-          sizes="100vw"
-          style={{
-            objectFit: "cover",
-          }}
-          className="absolute top-0 -z-[10]"
-          priority
-        />
-        <Image
-          src={Portrait}
-          alt="Olga Korka Portrait"
-          // width={500}
-          quality={95}
-          priority
-          className="absolute -z-[4] w-[22rem]  top-[20rem] right-3 lg:w-[33rem] lg:top-32 lg:right-24 xl:right-20 2xl:right-24 overflow-hidden"
-        />
-        <Image
-          src={HeaderBgWhite}
-          alt="Header White Background"
-          quality={95}
-          className="absolute top-[39rem] lg:top-[33rem] -z-[2]"
-          priority
-        />
-        <Image
-          src={HeaderStain}
-          alt="Header Stain Image"
-          quality={95}
-          priority
-          className="absolute -z-[1] w-[6rem] top-[38.5rem] left-5 lg:w-[12rem] lg:top-[34rem] lg:left-[16rem] xl:top-[35rem] xl:left-[20rem]"
-        />
-        <div className="flex flex-col text-center lg:text-left sm:w-full md:w-[45rem] lg:w-[60rem] xl:w-[70rem] max-w-[80rem] mx-3 lg:mx-0 pt-10 lg:pt-48 mb-20 gap-6 z-10">
-          <h1 className="text-2xl font-medium lg:mx-10 xl:mx-16">
-            Лекторий Ольги Корка
-          </h1>
-          <h2 className="font-sans uppercase text-4xl xl:text-5xl font-extralight tracking-widest lg:mx-10 xl:mx-16 lg:mb-[2rem]">
-            Объясняя Финляндию
-          </h2>
+      <section id="front-section">
+        <div className="relative w-full h-[50rem]">
+          <Image
+            src={HeaderBgPeach}
+            alt="Header Peach Background"
+            quality={95}
+            fill
+            sizes="100vw"
+            style={{
+              objectFit: "cover",
+            }}
+            className="absolute top-0 -z-[10]"
+            priority
+          />
+          <Image
+            src={Portrait}
+            alt="Olga Korka Portrait"
+            quality={100}
+            priority
+            className="absolute -z-[4] w-[22rem] top-[20rem] right-3 lg:w-[33rem] lg:top-32 lg:right-24 xl:right-20 2xl:right-24"
+          />
+          <Image
+            src={HeaderBgWhite}
+            alt="Header White Background"
+            quality={95}
+            className="absolute top-[39rem] lg:top-[33rem] -z-[2]"
+            priority
+          />
+          <Image
+            src={HeaderStain}
+            alt="Header Stain Image"
+            quality={100}
+            priority
+            className="absolute -z-[1] w-[6rem] top-[38.5rem] left-5 lg:w-[12rem] lg:top-[34rem] lg:left-[16rem] xl:top-[35rem] xl:left-[20rem]"
+          />
+          <div className="text-center lg:text-left pt-6 lg:pt-48 mx-10 lg:mx-32 z-10">
+            <h1 className="text-2xl font-medium mb-[1.5rem]">Лекторий Ольги Корка</h1>
+            <h2 className="font-sans uppercase text-4xl xl:text-5xl font-extralight tracking-widest mb-[2.5rem]">
+              Объясняя Финляндию
+            </h2>
 
-          <p className="text-left text-xl lg:w-1/2 mb-[2rem] font-extralight mx-5 lg:mx-10 xl:mx-16 leading-relaxed">
-            Образовательное пространство для тех, кто хочет сделать Финляндию
-            своим домом
-          </p>
-          <button className="w-[8rem] h-[2.5rem] mx-5 lg:mx-10 xl:mx-16 text-white font-normal bg-blue-main rounded-md ">
-            Связаться
-          </button>
+            <p className="text-left text-xl font-extralight leading-relaxed lg:w-1/2 mb-[1.5rem]">
+              Образовательное пространство для тех, кто хочет сделать Финляндию
+              своим домом
+            </p>
+            <div className="w-full text-left">
+              <button className="w-[8rem] h-[2.5rem] text-white font-normal bg-blue-main rounded-md ">
+                Связаться
+              </button>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section
-        id="description"
-        className="flex flex-col gap-6 text-xl font-extralight max-w-[70rem] mx-10 lg:mx-12 lg:mt-32 lg:mb-20 lg:px-16 leading-relaxed"
-      >
-        <p className="-mt-10 lg:mt-0">
-          Проект создан для того, чтобы все русскоязычные жители Финляндии, а
-          также те, кто интересуется финским языком, культурой и историей,
-          построили глубокую и прочную связь со страной через понимание и
-          принятие её культурно-исторических особенностей.
-        </p>
-        <p>
-          Если вы цените свободу и толерантность, если вами движет любопытство,
-          страсть к познанию и развитию, нам есть о чём поговорить!
-        </p>
+      <section id="description">
+        <div className="text-xl font-extralight mx-10 lg:mx-12 lg:mt-32 lg:mb-20 lg:px-16 leading-relaxed">
+          <p className="-mt-10 lg:-mt-36 mb-6">{projectDescription.desc1}</p>
+          <p>{projectDescription.desc2} </p>
+        </div>
       </section>
 
-      <section id="advantages">
-        <div className="mx-6 lg:mx-12 my-20 max-w-[70rem]">
-          <h2 className="text-center lg:text-left font-sans uppercase text-3xl lg:text-4xl font-extralight tracking-widest mb-[3rem]">
+      <section id="desires">
+        <div className="mx-6 lg:mx-12 my-20">
+          <h2 className="text-center lg:text-left font-sans uppercase text-3xl lg:text-4xl font-extralight tracking-widest mb-[2rem]">
             Если вы хотите:
           </h2>
           <div>
@@ -115,24 +113,14 @@ export default function Home() {
             Мои предложения
           </h2>
           <div className="grid grid-col-1 gap-10 lg:grid-cols-3">
-            {/* make an offer component */}
             {offers.map((offer, index) => (
-              <div key={index} className="flex flex-col items-center">
-                <Image
-                  src={offer.image}
-                  alt="offer picture"
-                  width={250}
-                  className="mb-6"
+              <React.Fragment key={index}>
+                <Offer
+                  image={offer.image}
+                  name={offer.name}
+                  description={offer.description}
                 />
-                <div className="flex flex-col items-start mx-16">
-                  <h3 className="uppercase font-medium mb-2">{offer.name}</h3>
-                  <p className="max-w-[30ch] mb-6">{offer.description}</p>
-                  <Link href="#" className="btn text-coral-main ">
-                    <FaEye />
-                    Узнать больше
-                  </Link>
-                </div>
-              </div>
+              </React.Fragment>
             ))}
           </div>
         </div>
@@ -205,13 +193,13 @@ export default function Home() {
           </h2>
           <div className="grid grid-cols-4">
             {articleData.map((article, index) => (
-              <div key={index}>
+              <React.Fragment key={index}>
                 <Article
                   image={article.image}
                   name={article.name}
                   source={article.source}
                 />
-              </div>
+              </React.Fragment>
             ))}
           </div>
         </div>
