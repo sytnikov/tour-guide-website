@@ -4,8 +4,8 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-import { serviceData } from "@/lib/data";
-import Service from "./Service";
+import { articleData } from "@/lib/data";
+import Article from "./Article";
 
 export default function ServicesCarousel() {
   const responsive = {
@@ -35,12 +35,12 @@ export default function ServicesCarousel() {
       containerClass="custom-list"
       dotListClass="custom-dot-list-service"
     >
-      {serviceData.map((service, index) => (
+      {articleData.map((article, index) => (
         <React.Fragment key={index}>
-          <Service
-            image={service.image}
-            name={service.name}
-            source={service.source}
+          <Article
+            image={article.image}
+            name={article.name}
+            source={article.source}
           />
         </React.Fragment>
       ))}
