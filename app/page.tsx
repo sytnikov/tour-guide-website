@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 
-import Bullet from "@/public/bullet.png";
 import FeedbackBackground from "@/public/feedback-bg.png";
 
 // import FeedbackSlider from "@/components/FeedbackSlider";
@@ -23,6 +22,7 @@ import Article from "@/components/Article";
 import ContactBackground from "@/public/contact-bg.png";
 import ContactForm from "@/components/ContactForm";
 import Offer from "@/components/Offer";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
@@ -63,7 +63,9 @@ export default function Home() {
             className="absolute -z-[1] w-[6rem] top-[38.5rem] left-5 lg:w-[12rem] lg:top-[34rem] lg:left-[16rem] xl:top-[35rem] xl:left-[20rem]"
           />
           <div className="text-center lg:text-left pt-6 lg:pt-48 mx-10 lg:mx-32 z-10">
-            <h1 className="text-2xl font-medium mb-[1.5rem]">Лекторий Ольги Корка</h1>
+            <h1 className="text-2xl font-medium mb-[1.5rem]">
+              Проект Ольги Корка
+            </h1>
             <h2 className="font-sans uppercase text-4xl xl:text-5xl font-extralight tracking-widest mb-[2.5rem]">
               Объясняя Финляндию
             </h2>
@@ -73,9 +75,7 @@ export default function Home() {
               своим домом
             </p>
             <div className="w-full text-left">
-              <button className="w-[8rem] h-[2.5rem] text-white font-normal bg-blue-main rounded-md ">
-                Связаться
-              </button>
+              <Button size={"lg"}>Связаться</Button>
             </div>
           </div>
         </div>
@@ -99,7 +99,7 @@ export default function Home() {
                 key={index}
                 className="flex items-center text-base lg:text-xl font-extralight gap-7 mb-6"
               >
-                <Image src={Bullet} alt="bullet icon" width={30} />
+                <Image src={item.image} alt="bullet icon" width={30} />
                 <p>{item.text}</p>
               </div>
             ))}
@@ -107,16 +107,17 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services">
+      <section id="offers">
         <div className="mx-0 my-10">
           <h2 className="text-center font-sans uppercase text-3xl lg:text-4xl font-extralight tracking-widest mb-[2rem]">
             Мои предложения
           </h2>
-          <div className="grid grid-col-1 gap-10 lg:grid-cols-3">
+          <div className="grid grid-col-1 lg:grid-cols-3">
             {offers.map((offer, index) => (
               <React.Fragment key={index}>
                 <Offer
                   image={offer.image}
+                  pre_name={offer.pre_name}
                   name={offer.name}
                   description={offer.description}
                 />
@@ -160,7 +161,7 @@ export default function Home() {
               quality={100}
             />
             <p className="text-base mx-16 font-extralight leading-relaxed lg:max-w-[20rem] lg:ml-6 lg:mr-12">
-              {aboutMe}
+              {aboutMe.text}
             </p>
           </div>
         </div>
