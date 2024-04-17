@@ -1,69 +1,126 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tenor+Sans&display=swap');
 
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
+  @tailwind components;
+  @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 255, 255, 255;
-  --background-end-rgb: 255, 255, 255;
-}
+  @layer base {
+    :root {
+      --background: 0 0% 100%;
+      --foreground: 222.2 84% 4.9%;
 
-html {
-  @apply font-roboto font-light;
-}
+      --card: 0 0% 100%;
+      --card-foreground: 222.2 84% 4.9%;
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+      --popover: 0 0% 100%;
+      --popover-foreground: 222.2 84% 4.9%;
 
-input::placeholder {
-  @apply text-black/60
-}
+      --primary: 222.2 47.4% 11.2%;
+      --primary-foreground: 210 40% 98%;
 
-textarea::placeholder {
-  @apply text-black/60
-}
+      --secondary: 210 40% 96.1%;
+      --secondary-foreground: 222.2 47.4% 11.2%;
 
-/* button styles */
+      --muted: 210 40% 96.1%;
+      --muted-foreground: 215.4 16.3% 46.9%;
 
-.btn {
-  @apply flex items-center justify-center gap-4
-}
+      --accent: 210 40% 96.1%;
+      --accent-foreground: 222.2 47.4% 11.2%;
 
-.btn-submit {
-  @apply px-8 py-3 bg-coral-main rounded-xl
-  text-white
-}
+      --destructive: 0 84.2% 60.2%;
+      --destructive-foreground: 210 40% 98%;
 
-.btn-icon {
-  @apply text-2xl text-black px-4 cursor-pointer
-  rounded-full px-3 py-3
-}
+      --border: 214.3 31.8% 91.4%;
+      --input: 214.3 31.8% 91.4%;
+      --ring: 222.2 84% 4.9%;
 
-.react-multi-carousel-list.custom-list {
-  @apply overflow-hidden md:mx-10
-}
+      --radius: 0.5rem;
+    }
 
-.react-multi-carousel-list.custom-list > ul > li > button {
-  @apply w-2 h-2 mx-2
-}
+    .dark {
+      --background: 222.2 84% 4.9%;
+      --foreground: 210 40% 98%;
 
-.react-multi-carousel-dot-list.custom-dot-list-service button {
-  @apply border-none bg-blue-light
-}
+      --card: 222.2 84% 4.9%;
+      --card-foreground: 210 40% 98%;
 
-.react-multi-carousel-dot-list.custom-dot-list-feedback button {
-  @apply border-none bg-white
-}
+      --popover: 222.2 84% 4.9%;
+      --popover-foreground: 210 40% 98%;
 
-.react-multi-carousel-dot.react-multi-carousel-dot--active button{
-  @apply bg-blue-dark
-}
+      --primary: 210 40% 98%;
+      --primary-foreground: 222.2 47.4% 11.2%;
+
+      --secondary: 217.2 32.6% 17.5%;
+      --secondary-foreground: 210 40% 98%;
+
+      --muted: 217.2 32.6% 17.5%;
+      --muted-foreground: 215 20.2% 65.1%;
+
+      --accent: 217.2 32.6% 17.5%;
+      --accent-foreground: 210 40% 98%;
+
+      --destructive: 0 62.8% 30.6%;
+      --destructive-foreground: 210 40% 98%;
+
+      --border: 217.2 32.6% 17.5%;
+      --input: 217.2 32.6% 17.5%;
+      --ring: 212.7 26.8% 83.9%;
+    }
+  }
+
+  @layer base {
+    * {
+      @apply border-border;
+    }
+    body {
+      @apply bg-background text-foreground;
+    }
+  }
+
+  html {
+    @apply font-roboto font-light;
+  }
+
+  input::placeholder {
+    @apply text-black/60
+  }
+  
+  textarea::placeholder {
+    @apply text-black/60
+  }
+  
+  /* button styles */
+  
+  .btn {
+    @apply flex items-center justify-center gap-4
+  }
+  
+  .btn-submit {
+    @apply px-8 py-3 bg-coral-main rounded-xl
+    text-white
+  }
+  
+  .btn-icon {
+    @apply text-2xl text-black px-4 cursor-pointer
+    rounded-full px-3 py-3
+  }
+  
+  .react-multi-carousel-list.custom-list {
+    @apply overflow-hidden md:mx-10
+  }
+  
+  .react-multi-carousel-list.custom-list > ul > li > button {
+    @apply w-2 h-2 mx-2
+  }
+  
+  .react-multi-carousel-dot-list.custom-dot-list-service button {
+    @apply border-none bg-blue-light
+  }
+  
+  .react-multi-carousel-dot-list.custom-dot-list-feedback button {
+    @apply border-none bg-white
+  }
+  
+  .react-multi-carousel-dot.react-multi-carousel-dot--active button{
+    @apply bg-blue-dark
+  }
