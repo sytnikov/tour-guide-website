@@ -14,7 +14,7 @@ export default function SocialMediaLinksMobile() {
   return (
     <div className="flex items-center lg:hidden justify-center gap-4">
       <div className="relative">
-        <Image src={BgInstagram} alt="background image" width={70} />
+        <Image src={BgInstagram} alt="background image" width={65} />
         <Link
           href="#"
           className="absolute top-0 left-0 flex items-center justify-center w-full h-full"
@@ -23,7 +23,7 @@ export default function SocialMediaLinksMobile() {
         </Link>
       </div>
       <div className="relative">
-        <Image src={BgMail} alt="background image" width={70} />
+        <Image src={BgMail} alt="background image" width={65} />
         <Link
           href="#"
           className="absolute top-0 left-0 flex items-center justify-center w-full h-full"
@@ -32,7 +32,7 @@ export default function SocialMediaLinksMobile() {
         </Link>
       </div>
       <div className="relative">
-        <Image src={BgFacebook} alt="background image" width={70} />
+        <Image src={BgFacebook} alt="background image" width={65} />
         <Link
           href="#"
           className="absolute top-0 left-0 flex items-center justify-center w-full h-full"
@@ -41,7 +41,7 @@ export default function SocialMediaLinksMobile() {
         </Link>
       </div>
       <div className="relative">
-        <Image src={BgGmail} alt="background image" width={70} />
+        <Image src={BgGmail} alt="background image" width={65} />
         <Link
           href="#"
           className="absolute top-0 left-0 flex items-center justify-center w-full h-full"
