@@ -23,6 +23,7 @@ import Article from "@/components/Article";
 import ContactBackground from "@/public/contact-bg.png";
 import ContactForm from "@/components/ContactForm";
 import Offer from "@/components/Offer";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
@@ -73,9 +74,7 @@ export default function Home() {
               своим домом
             </p>
             <div className="w-full text-left">
-              <button className="w-[8rem] h-[2.5rem] text-white font-normal bg-blue-main rounded-md ">
-                Связаться
-              </button>
+              <Button size={"lg"}>Связаться</Button>
             </div>
           </div>
         </div>
@@ -112,7 +111,7 @@ export default function Home() {
           <h2 className="text-center font-sans uppercase text-3xl lg:text-4xl font-extralight tracking-widest mb-[2rem]">
             Мои предложения
           </h2>
-          <div className="grid grid-col-1 gap-10 lg:grid-cols-3">
+          <div className="grid grid-col-1 lg:grid-cols-3">
             {offers.map((offer, index) => (
               <React.Fragment key={index}>
                 <Offer

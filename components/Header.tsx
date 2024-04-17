@@ -9,6 +9,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { navLinks } from "@/lib/data";
 import Logo from "@/public/logo.png";
 import SocialMediaLinksMobile from "./SocialMediaLinksMobile";
+import { Button } from "./ui/button";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -101,10 +102,10 @@ export default function Header() {
                         ))}
                       </ul>
                     </div>
-                    <button className="btn btn-submit text-xl mb-28">
+                    <Button size={"lg"} className="mb-28">
                       Задать вопрос
                       <FaRegImage />
-                    </button>
+                    </Button>
                     <SocialMediaLinksMobile />
                   </div>
                 </div>

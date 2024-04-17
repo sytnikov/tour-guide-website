@@ -1,14 +1,16 @@
 import { FaPaperPlane } from "react-icons/fa";
 
+import { Button } from "./ui/button";
+
 type SubmitBtnProps = {
-  actionName: string
-}
+  actionName: string;
+};
 
 export default function SubmitBtn({ actionName }: SubmitBtnProps) {
   return (
-    <button type="submit" className="btn btn-submit">
+    <Button type="submit" size={"lg"}>
       {actionName}
       <FaPaperPlane />
-    </button>
-  )
+    </Button>
+  );
 }
