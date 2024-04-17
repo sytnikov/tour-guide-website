@@ -18,8 +18,8 @@
       --primary: 9 76% 69%;
       --primary-foreground: 210 40% 98%;
 
-      --secondary: 210 40% 96.1%;
-      --secondary-foreground: 222.2 47.4% 11.2%;
+      --secondary: 199 33% 65%;
+      --secondary-foreground: 210 40% 98%;
 
       --muted: 210 40% 96.1%;
       --muted-foreground: 215.4 16.3% 46.9%;
@@ -75,10 +75,9 @@
     body {
       @apply bg-background text-foreground;
     }
-  }
-
-  html {
-    @apply font-roboto font-light;
+    html {
+      @apply font-roboto font-light;
+    }
   }
 
   input::placeholder {
@@ -89,12 +88,7 @@
     @apply text-black/60
   }
   
-  /* button styles */
-  
-  .btn-icon {
-    @apply text-2xl text-black px-4 cursor-pointer
-    rounded-full px-3 py-3
-  }
+  /* carousel styles */
   
   .react-multi-carousel-list.custom-list {
     @apply overflow-hidden md:mx-10

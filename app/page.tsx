@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 
-import Bullet from "@/public/bullet.png";
 import FeedbackBackground from "@/public/feedback-bg.png";
 
 // import FeedbackSlider from "@/components/FeedbackSlider";
@@ -64,7 +63,9 @@ export default function Home() {
             className="absolute -z-[1] w-[6rem] top-[38.5rem] left-5 lg:w-[12rem] lg:top-[34rem] lg:left-[16rem] xl:top-[35rem] xl:left-[20rem]"
           />
           <div className="text-center lg:text-left pt-6 lg:pt-48 mx-10 lg:mx-32 z-10">
-            <h1 className="text-2xl font-medium mb-[1.5rem]">Проект Ольги Корка</h1>
+            <h1 className="text-2xl font-medium mb-[1.5rem]">
+              Проект Ольги Корка
+            </h1>
             <h2 className="font-sans uppercase text-4xl xl:text-5xl font-extralight tracking-widest mb-[2.5rem]">
               Объясняя Финляндию
             </h2>
@@ -98,7 +99,7 @@ export default function Home() {
                 key={index}
                 className="flex items-center text-base lg:text-xl font-extralight gap-7 mb-6"
               >
-                <Image src={Bullet} alt="bullet icon" width={30} />
+                <Image src={item.image} alt="bullet icon" width={30} />
                 <p>{item.text}</p>
               </div>
             ))}

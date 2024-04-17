@@ -7,6 +7,11 @@ import Avatar3 from "@/public/avatar3.jpg";
 import Article1 from "../public/article1.png";
 import Article2 from "@/public/article2.png";
 import Article3 from "../public/article3.png";
+import BulletBlue from "@/public/bullet-blue.png";
+import BulletOrange from "@/public/bullet-orange.png";
+import BulletPeach from "@/public/bullet-peach.png";
+import BulletCoral from "@/public/bullet-coral.png";
+
 
 export const navLinks = [
   "Главная",
@@ -19,21 +24,27 @@ export const navLinks = [
 
 export const yourDesires = [
   {
+    image: BulletBlue,
     text: "Рассмотреть Финляндию за пределами субъективных оценок, осуждений и восторгов."
   },
   {
+    image: BulletOrange,
     text: 'Глубже понять культурно-исторические предпосылки и процессы, лежащие в основе уже известных явлений. Ответы на вопрос "почему так?" предоставляют возможности для разработки стратегий "как с этим быть".'
   },
   {
+    image: BulletPeach,
     text: "Разложить финскую действительность на уровне менталитета и культурных кодов."
   },
   {
+    image: BulletBlue,
     text: "Помочь детям, родившимся в другой стране, формировать новую идентичность на пересечении культур, а также облегчить освоение школьных программ по истории и обществознанию."
   },
   {
+    image: BulletCoral,
     text: "Питать восторг по отношению к Финляндии: её устройству, природе, людям, культурному и гастрономическому разнообразию."
   },
   {
+    image: BulletPeach,
     text: "И, наконец, для того чтобы жить в Финляндии полной жизнью и сделать её действительно своей."
   }
 ] as const
