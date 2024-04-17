@@ -75,7 +75,7 @@ export default function Home() {
               своим домом
             </p>
             <div className="w-full text-left">
-              <Button size={"lg"}>Связаться</Button>
+              <Button>Связаться</Button>
             </div>
           </div>
         </div>
