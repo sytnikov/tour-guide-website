@@ -9,6 +9,7 @@ type OfferProps = {
   pre_name: string;
   name: string;
   description: string;
+  href: string;
 };
 
 export default function Offer({
@@ -16,6 +17,7 @@ export default function Offer({
   pre_name,
   name,
   description,
+  href,
 }: OfferProps) {
   return (
     <div className="flex flex-col items-center">
@@ -26,7 +28,7 @@ export default function Offer({
         <p className="max-w-[30ch] mb-3">{description}</p>
         <Button variant={"link"} className="px-0 text-base">
           <Link
-            href="#"
+            href={href}
             className="flex items-center justify-start gap-2 text-coral-main"
           >
             <FaEye />

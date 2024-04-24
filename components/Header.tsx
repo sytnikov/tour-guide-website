@@ -25,26 +25,27 @@ export default function Header() {
   return (
     <header>
       <Popover>
-        <div className="hidden lg:flex items-center h-[6rem] mb-4 py-10 px-10 fixed z-[999] top-0 left-1/2 -translate-x-1/2 rounded-none bg-[transparent] bg-opacity-70 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:h-[3.25rem] sm:w-[100%]">
-          <Image
-            src={Logo}
-            alt="Olga Korka logo"
-            width={90}
-            quality={100}
-            priority
-            className="p-2"
-          />
-          <nav className="flex fixed top-[0.15rem] left-1/2 -translate-x-1/2 h-12 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
-            <ul className="flex items-center text-nowrap gap-4">
-              {navLinks.map((link, index) => (
-                <li key={index} className="text-base text-black/70">
-                  {link}
-                </li>
-              ))}
-            </ul>
-          </nav>
+        <div className=" z-[999] top-0 flex items-center justify-center w-full bg-peach-light rounded-none">
+          <div className="hidden md:flex flex-1 items-center justify-between px-4 py-2 max-w-[80rem]">
+            <Image
+              src={Logo}
+              alt="Olga Korka logo"
+              width={90}
+              quality={100}
+              priority
+            />
+            <nav className="">
+              <ul className="flex items-center text-nowrap gap-4">
+                {navLinks.map((link, index) => (
+                  <li key={index} className="text-base text-black/70">
+                    {link}
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
         </div>
-        <div className="flex lg:hidden w-full bg-[#FBD9C1]">
+        <div className=" z-[999] top-0 flex md:hidden items-center justify-center w-full bg-peach-light rounded-none">
           <Image
             src={Logo}
             alt="Olga Korka logo"
@@ -53,7 +54,7 @@ export default function Header() {
             priority
             className="m-4"
           />
-          <div className="flex grow items-center justify-end m-4">
+          <div className="flex flex-1 items-center justify-end m-4">
             <Popover.Button
               onClick={handleOpenPopover}
               className="inline-flex items-center justify-center rounded-md text-black"
@@ -73,7 +74,7 @@ export default function Header() {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Popover.Panel className="absolute z-[1000] inset-x-0 top-0 origin-top-right transform transition md:hidden">
+              <Popover.Panel className="absolute z-[2000] inset-x-0 top-0 origin-top-right transform transition md:hidden">
                 <div className=" bg-[#FBD9C1] shadow-lg ring-1 ring-black ring-opacity-5 divide-y-2 divide-gray-50 min-h-screen">
                   <div className="mx-4">
                     <div className="flex">

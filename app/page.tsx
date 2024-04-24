@@ -27,50 +27,27 @@ import { Button } from "@/components/ui/button";
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden">
-      <section id="front-section">
-        <div className="relative w-full h-[50rem]">
-          <Image
-            src={HeaderBgPeach}
-            alt="Header Peach Background"
-            quality={95}
-            fill
-            sizes="100vw"
-            style={{
-              objectFit: "cover",
-            }}
-            className="absolute top-0 -z-[10]"
-            priority
-          />
+      <section id="front-section" className="wrapper bg-peach-stain">
+        <div className="relative max-w-[25rem] lg:max-w-[80rem] h-[749px] mx-auto px-3 lg:px-6">
+          
           <Image
             src={Portrait}
             alt="Olga Korka Portrait"
             quality={100}
             priority
-            className="absolute -z-[4] w-[22rem] top-[20rem] right-3 lg:w-[33rem] lg:top-32 lg:right-24 xl:right-20 2xl:right-24"
+            className="absolute z-[1] top-72 right-0 lg:top-20 lg:right-4 w-[22rem] sm:w-[33rem]"
           />
-          <Image
-            src={HeaderBgWhite}
-            alt="Header White Background"
-            quality={95}
-            className="absolute top-[39rem] lg:top-[33rem] -z-[2]"
-            priority
-          />
-          <Image
-            src={HeaderStain}
-            alt="Header Stain Image"
-            quality={100}
-            priority
-            className="absolute -z-[1] w-[6rem] top-[38.5rem] left-5 lg:w-[12rem] lg:top-[34rem] lg:left-[16rem] xl:top-[35rem] xl:left-[20rem]"
-          />
-          <div className="text-center lg:text-left pt-6 lg:pt-48 mx-10 lg:mx-32 z-10">
+          
+          
+          <div className="text-center lg:text-left pt-6 lg:pt-48">
             <h1 className="text-2xl font-medium mb-[1.5rem]">
               Проект Ольги Корка
             </h1>
-            <h2 className="font-sans uppercase text-4xl xl:text-5xl font-extralight tracking-widest mb-[2.5rem]">
+            <h2 className="font-sans uppercase text-3xl sm:text-5xl font-extralight tracking-widest mb-[2.5rem] lg:w-[70%]">
               Объясняя Финляндию
             </h2>
 
-            <p className="text-left text-xl font-extralight leading-relaxed lg:w-1/2 mb-[1.5rem]">
+            <p className="text-left text-xl font-extralight leading-relaxed mb-[1.5rem] lg:w-[50%]">
               Образовательное пространство для тех, кто хочет сделать Финляндию
               своим домом
             </p>
@@ -120,6 +97,7 @@ export default function Home() {
                   pre_name={offer.pre_name}
                   name={offer.name}
                   description={offer.description}
+                  href={offer.href}
                 />
               </React.Fragment>
             ))}

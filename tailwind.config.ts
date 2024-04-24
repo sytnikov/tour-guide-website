@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: {
+        "peach-stain": "url('/peach-stain.svg')"
+      },
       fontFamily: {
         roboto: ["Roboto"],
         sans: ["Tenor Sans", "Helvetica", "Arial", "sans-serif"]
@@ -64,7 +67,7 @@ const config = {
         },
         peach: {
           extralight: "#FEF9F5",
-          light: "#FCDFCB",
+          light: "#FFDEC6",
           main: "#F9C097",
           dark: "#C79A79",
         },
