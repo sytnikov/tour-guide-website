@@ -14,9 +14,6 @@ import {
 import OlgaPortrait from "@/public/olga-about.png";
 import ArticlesCarousel from "@/components/ArticlesCarousel";
 import FeedbackSlider from "@/components/FeedbackSlider";
-import HeaderBgPeach from "@/public/header-bg-yellow.png";
-import HeaderBgWhite from "@/public/header-bg-white.png";
-import HeaderStain from "@/public/header-stain.png";
 import Portrait from "@/public/olga.png";
 import Article from "@/components/Article";
 import ContactBackground from "@/public/contact-bg.png";
@@ -29,7 +26,6 @@ export default function Home() {
     <main className="min-h-screen overflow-hidden">
       <section id="front-section" className="wrapper bg-peach-stain">
         <div className="relative max-w-[25rem] lg:max-w-[80rem] h-[749px] mx-auto px-3 lg:px-6">
-          
           <Image
             src={Portrait}
             alt="Olga Korka Portrait"
@@ -37,8 +33,7 @@ export default function Home() {
             priority
             className="absolute z-[1] top-72 right-0 lg:top-20 lg:right-4 w-[22rem] sm:w-[33rem]"
           />
-          
-          
+
           <div className="text-center lg:text-left pt-6 lg:pt-48">
             <h1 className="text-2xl font-medium mb-[1.5rem]">
               Проект Ольги Корка
@@ -165,12 +160,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="articles" className="hidden lg:block">
-        <div className="mx-10 my-16">
-          <h2 className="font-sans uppercase text-4xl font-extralight tracking-widest mb-[3rem]">
+      <section id="articles" className="hidden md:block w-full">
+        <div className="max-w-[80rem] mx-auto my-16">
+          <h2 className="font-sans uppercase text-4xl text-center font-extralight tracking-widest mb-[3rem]">
             А это будет интересно
           </h2>
-          <div className="grid grid-cols-4">
+          <div className="grid grid-cols-3 items-start">
             {articleData.map((article, index) => (
               <React.Fragment key={index}>
                 <Article
@@ -183,11 +178,13 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="articles-mobile" className="lg:hidden my-16 w-full">
-        <h2 className="font-sans uppercase text-3xl font-extralight tracking-widest text-center mb-[2rem]">
-          А это будет интересно
-        </h2>
-        <ArticlesCarousel />
+      <section id="articles-mobile" className="md:hidden w-full">
+        <div className="w-full my-16">
+          <h2 className="font-sans uppercase text-3xl font-extralight tracking-widest text-center mb-[2rem]">
+            А это будет интересно
+          </h2>
+          <ArticlesCarousel />
+        </div>
       </section>
     </main>
   );

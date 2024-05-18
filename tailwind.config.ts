@@ -19,7 +19,7 @@ const config = {
     },
     extend: {
       backgroundImage: {
-        "peach-stain": "url('/peach-stain.svg')"
+        "peach-stain": "url('/stains/peach-stain.svg')"
       },
       fontFamily: {
         roboto: ["Roboto"],

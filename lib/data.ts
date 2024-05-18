@@ -110,11 +110,6 @@ export const articleData = [
     name: "ВЕСЬ В ДЕЛАХ: «В другой стране ты никогда не станешь своим в доску, но в этом нет трагедии» /",
     source: "YLE.FI",
   },
-  {
-    image: Article1,
-    name: "Финляндия в стекле. Стеклянное наследие Алвара Аалто /",
-    source: "журнал Culturalist",
-  },
 ] as const;
 
 export const aboutMe = {
