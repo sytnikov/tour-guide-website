@@ -22,8 +22,11 @@ const config = {
         "footer-stain": "url('/stains/footer-stain.svg')",
         "footer-mobile-stain": "url('/stains/footer-mobile-stain.svg')",
         "peach-stain": "url('/stains/peach-stain.svg')",
+        "peach-mobile-stain": "url('/stains/peach-mobile-stain.svg')",
         "blue-feedback-stain": "url('/stains/blue-feedback-stain.svg')",
+        "blue-feedback-mobile-stain": "url('/stains/blue-feedback-mobile-stain.svg')",
         "contact-form-stain": "url('/stains/contact-form-stain.svg')",
+        "contact-form-mobile-stain": "url('/stains/contact-form-mobile-stain.svg')",
       },
       fontFamily: {
         roboto: ["Roboto"],
