@@ -19,6 +19,8 @@ const config = {
     },
     extend: {
       backgroundImage: {
+        "footer-stain": "url('/stains/footer-stain.svg')",
+        "footer-mobile-stain": "url('/stains/footer-mobile-stain.svg')",
         "peach-stain": "url('/stains/peach-stain.svg')",
         "blue-feedback-stain": "url('/stains/blue-feedback-stain.svg')",
         "contact-form-stain": "url('/stains/contact-form-stain.svg')",
