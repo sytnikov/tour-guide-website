@@ -111,5 +111,5 @@ textarea::placeholder {
 }
 
 .wrapper {
-  @apply w-full bg-center bg-bottom bg-no-repeat
+  @apply w-full bg-center bg-no-repeat;
 }

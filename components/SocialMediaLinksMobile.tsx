@@ -12,7 +12,7 @@ import BgFacebook from "@/public/icon-bg-facebook.png";
 
 export default function SocialMediaLinksMobile() {
   return (
-    <div className="flex items-center lg:hidden justify-center gap-4">
+    <div className="flex items-end justify-start gap-4">
       <div className="relative">
         <Image src={BgInstagram} alt="background image" width={65} />
         <Link
