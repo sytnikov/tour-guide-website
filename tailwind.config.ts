@@ -1,13 +1,13 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -19,11 +19,13 @@ const config = {
     },
     extend: {
       backgroundImage: {
-        "peach-stain": "url('/stains/peach-stain.svg')"
+        "peach-stain": "url('/stains/peach-stain.svg')",
+        "blue-feedback-stain": "url('/stains/blue-feedback-stain.svg')",
+        "contact-form-stain": "url('/stains/contact-form-stain.svg')",
       },
       fontFamily: {
         roboto: ["Roboto"],
-        sans: ["Tenor Sans", "Helvetica", "Arial", "sans-serif"]
+        sans: ["Tenor Sans", "Helvetica", "Arial", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -74,17 +76,17 @@ const config = {
         black: "#000000",
         white: "#FFFFFF",
         gray: {
-          50: '#f9fafb',
-          100: '#f3f4f6',
-          200: '#e5e7eb',
-          300: '#d1d5db',
-          400: '#9ca3af',
-          500: '#6b7280',
-          600: '#4b5563',
-          700: '#374151',
-          800: '#1f2937',
-          900: '#111827',
-          950: '#030712',
+          50: "#f9fafb",
+          100: "#f3f4f6",
+          200: "#e5e7eb",
+          300: "#d1d5db",
+          400: "#9ca3af",
+          500: "#6b7280",
+          600: "#4b5563",
+          700: "#374151",
+          800: "#1f2937",
+          900: "#111827",
+          950: "#030712",
         },
         card: {
           DEFAULT: "hsl(var(--card))",
@@ -113,6 +115,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;
