@@ -13,7 +13,7 @@ export default function HeroSection() {
           alt="Olga Korka Portrait"
           quality={100}
           priority
-          className="absolute z-[1] top-72 right-0 w-[30rem]
+          className="absolute z-[1] top-72 right-0 w-[28rem]
           md:top-10 md:w-[40rem] 
           lg:top-14 lg:w-[40rem]"
         />

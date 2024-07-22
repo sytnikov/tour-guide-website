@@ -9,6 +9,7 @@ import BgInstagram from "@/public/icon-bg-instagram.png";
 import BgMail from "@/public/icon-bg-mail.png";
 import BgGmail from "@/public/icon-bg-gmail.png";
 import BgFacebook from "@/public/icon-bg-facebook.png";
+import { FacebookIcon, InstagramIcon, LinkedinIcon, MailIcon } from "./icons/SocialMediaIcons";
 
 export default function SocialMediaLinksMobile() {
   return (
@@ -19,7 +20,7 @@ export default function SocialMediaLinksMobile() {
           href="#"
           className="absolute top-0 left-0 flex items-center justify-center w-full h-full"
         >
-          <FaInstagram className="text-black text-3xl" />
+          <InstagramIcon />
         </Link>
       </div>
       <div className="relative">
@@ -28,7 +29,7 @@ export default function SocialMediaLinksMobile() {
           href="#"
           className="absolute top-0 left-0 flex items-center justify-center w-full h-full"
         >
-          <CiMail className="text-black text-3xl" />
+          <MailIcon />
         </Link>
       </div>
       <div className="relative">
@@ -37,7 +38,7 @@ export default function SocialMediaLinksMobile() {
           href="#"
           className="absolute top-0 left-0 flex items-center justify-center w-full h-full"
         >
-          <FaFacebook className="text-black text-3xl" />
+          <FacebookIcon />
         </Link>
       </div>
       <div className="relative">
@@ -46,7 +47,7 @@ export default function SocialMediaLinksMobile() {
           href="#"
           className="absolute top-0 left-0 flex items-center justify-center w-full h-full"
         >
-          <FaGoogle className="text-black text-3xl" />
+          <LinkedinIcon />
         </Link>
       </div>
     </div>
