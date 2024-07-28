@@ -7,7 +7,7 @@ export default function AboutSection() {
   return (
     <section className="w-full">
       <div className="mx-auto mb-16">
-        <h2 className="text-center font-sans uppercase text-3xl lg:text-4xl font-extralight tracking-widest mb-[2rem]">
+        <h2 className="text-center mb-[2rem]">
           Обо мне
         </h2>
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8">

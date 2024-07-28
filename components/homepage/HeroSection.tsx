@@ -28,12 +28,12 @@ export default function HeroSection() {
           xl:left-96"
         />
         <div className="text-center pt-6 md:text-left md:pt-24 md:w-[60%] lg:pt-48 lg:w-full">
-          <h1 className="text-2xl font-medium mb-[1.5rem]">
+          <p className="text-2xl font-medium mb-[1.5rem]">
             Проект Ольги Корка
-          </h1>
-          <h2 className="font-sans uppercase text-3xl font-extralight tracking-widest mb-[2.5rem] md:text-4xl lg:text-5xl lg:w-[70%]">
+          </p>
+          <h1 className="mb-[2.5rem] lg:w-[70%]">
             Объясняя Финляндию
-          </h2>
+          </h1>
           <p className="text-left text-xl font-extralight leading-relaxed mb-[1.5rem] md:w-[50%]">
             Образовательное пространство для тех, кто хочет сделать Финляндию
             своим домом

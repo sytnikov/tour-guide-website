@@ -25,7 +25,7 @@ export default function Header() {
   return (
     <header>
       <Popover>
-        <div className=" z-[999] top-0 flex items-center justify-center w-full bg-peach-light rounded-none">
+        <div className={`z-[999] top-0 flex items-center justify-center w-full bg-white rounded-none`}>
           <div className="hidden md:flex flex-1 items-center justify-between px-4 py-2 max-w-[80rem]">
             <Image
               src={Logo}
@@ -45,7 +45,7 @@ export default function Header() {
             </nav>
           </div>
         </div>
-        <div className=" z-[999] top-0 flex md:hidden items-center justify-center w-full bg-peach-light rounded-none">
+        <div className=" z-[999] top-0 flex md:hidden items-center justify-center w-full bg-white rounded-none">
           <Image
             src={Logo}
             alt="Olga Korka logo"

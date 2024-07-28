@@ -30,12 +30,12 @@ export default function Footer() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-white text-base md:text-lg mx-10 pt-20 md:pt-64">
           <div>
-            <h3 className="uppercase font-medium mb-4">Контакты</h3>
+            <h3 className="uppercase text-lg mb-4">Контакты</h3>
             <p>E-mail: olga.korka@gmail.com</p>
             <p className="text-lg">Тел: +358 45 3559757</p>
           </div>
           <div>
-            <h3 className="uppercase font-medium mb-4">Меню</h3>
+            <h3 className="uppercase text-lg mb-4">Меню</h3>
             <nav>
               <ul className="flex flex-col items-start text-nowrap gap-1 text-white">
                 {navLinks.map((link, index) => (

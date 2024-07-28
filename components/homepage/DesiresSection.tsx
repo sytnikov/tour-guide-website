@@ -6,7 +6,7 @@ export default function Desires() {
   return (
     <section className="w-full">
       <div className="px-3 mx-auto mb-16 max-w-[80rem]">
-        <h2 className="text-center md:text-left font-sans uppercase text-3xl lg:text-4xl font-extralight tracking-widest mb-[2rem]">
+        <h2 className="text-center md:text-left mb-[2rem]">
           Если вы хотите:
         </h2>
         <div>

@@ -14,7 +14,7 @@ export default function Article({ image, name, source }: ArticleProps) {
         alt="service image"
         className="border-none rounded-2xl"
       />
-      <h2 className="font-normal text-lg md:text-sm w-[70%]">{name}</h2>
+      <h3 className="font-normal text-lg md:text-sm w-[70%]">{name}</h3>
       <p className="w-[70%] pb-10 ">{source}</p>
     </div>
   );

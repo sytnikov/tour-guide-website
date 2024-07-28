@@ -7,7 +7,7 @@ export default function OffersSection() {
   return (
     <section className="w-full">
       <div className="px-3 mx-auto max-w-[80rem]">
-        <h2 className="text-center font-sans uppercase text-3xl lg:text-4xl font-extralight tracking-widest mb-[2rem]">
+        <h2 className="text-center mb-[2rem]">
           Мои предложения
         </h2>
         <div className="grid grid-col-1 md:grid-cols-3">

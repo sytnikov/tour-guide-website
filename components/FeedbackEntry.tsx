@@ -23,8 +23,8 @@ export default function FeedbackEntry({
           className="rounded-full"
         />
         <div>
-          <h3 className="font-medium mb-3">{name}</h3>
-          <p className="font-medium mb-4">{date}</p>
+          <h3 className="text-lg mb-3">{name}</h3>
+          <p className="text-lg mb-4">{date}</p>
         </div>
       </div>
       <p className="hidden lg:block">{text}</p>
