@@ -7,7 +7,7 @@ import AaltoStain from "@/public/stains/aalto-stain.svg";
 export default function HeroSection() {
   return (
     <section className="wrapper bg-peach-mobile-stain md:bg-peach-stain">
-      <div className="relative h-[729px] md:h-[750px] px-3 mx-auto mb-16 max-w-[25rem] md:max-w-[48rem] lg:max-w-[64rem] xl:max-w-[80rem] ">
+      <div className="relative h-[729px] md:h-[750px] px-3 mx-auto mb-16 max-w-[25rem] md:max-w-[48rem] lg:max-w-[64rem]">
         <Image
           src={Portrait}
           alt="Olga Korka Portrait"
@@ -27,14 +27,14 @@ export default function HeroSection() {
           lg:-bottom-12 lg:left-64 lg:w-[12rem]
           xl:left-96"
         />
-        <div className="text-center pt-6 md:text-left md:pt-24 md:w-[60%] lg:pt-48 lg:w-full">
-          <p className="text-2xl font-medium mb-[1.5rem]">
+        <div className="text-center pt-6 md:text-left md:pt-24 md:w-[60%] lg:w-full">
+          <p className="text-3xl font-medium mb-[1.5rem]">
             Проект Ольги Корка
           </p>
-          <h1 className="mb-[2.5rem] lg:w-[70%]">
+          <h1 className="mb-[2.5rem] lg:w-[60%] leading-tight">
             Объясняя Финляндию
           </h1>
-          <p className="text-left text-xl font-extralight leading-relaxed mb-[1.5rem] md:w-[50%]">
+          <p className="text-left text-xl lg:text-2xl font-extralight leading-relaxed mb-[1.5rem] md:w-[50%]">
             Образовательное пространство для тех, кто хочет сделать Финляндию
             своим домом
           </p>

@@ -81,7 +81,7 @@
 }
 
 h1 {
-  @apply font-sans uppercase text-3xl font-extralight tracking-widest md:text-4xl lg:text-5xl
+  @apply font-sans uppercase text-4xl font-extralight tracking-widest lg:text-6xl 
 }
 
 h2 {

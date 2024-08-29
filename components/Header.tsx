@@ -25,7 +25,9 @@ export default function Header() {
   return (
     <header>
       <Popover>
-        <div className={`z-[999] top-0 flex items-center justify-center w-full bg-white rounded-none`}>
+        <div
+          className={`z-[999] top-0 flex items-center justify-center w-full bg-white rounded-none`}
+        >
           <div className="hidden md:flex flex-1 items-center justify-between px-4 py-2 max-w-[80rem]">
             <Image
               src={Logo}
@@ -34,7 +36,7 @@ export default function Header() {
               quality={100}
               priority
             />
-            <nav className="">
+            <nav>
               <ul className="flex items-center text-nowrap gap-4">
                 {navLinks.map((link, index) => (
                   <li key={index} className="text-base text-black/70">
@@ -87,12 +89,13 @@ export default function Header() {
                         className="my-4"
                       />
                       <div className="flex grow items-center justify-end my-4">
-                        
-                          <Popover.Button onClick={handleClosePopover} className="inline-flex items-center rounded-md text-black">
-                            <span className="sr-only">Close menu</span>
-                            <XMarkIcon className="h-8 w-8" aria-hidden="true" />
-                          </Popover.Button>
-                        
+                        <Popover.Button
+                          onClick={handleClosePopover}
+                          className="inline-flex items-center rounded-md text-black"
+                        >
+                          <span className="sr-only">Close menu</span>
+                          <XMarkIcon className="h-8 w-8" aria-hidden="true" />
+                        </Popover.Button>
                       </div>
                     </div>
 
